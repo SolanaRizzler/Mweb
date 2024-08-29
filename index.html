@@ -3,156 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify Dog</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Netflix Dog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #121212;
-            color: #ffffff;
+        body, html {
             margin: 0;
             padding: 0;
+            height: 100%;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #141414;
+            color: #fff;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
+        .loading-page {
             display: flex;
+            justify-content: center;
             align-items: center;
-            margin-bottom: 30px;
+            height: 100vh;
+            background-color: #000;
         }
-        .profile-pic {
+        .loading-logo {
             width: 200px;
             height: 200px;
-            border-radius: 10px;
-            object-fit: cover;
-            margin-right: 20px;
+            background-image: url('https://i.postimg.cc/KYtBczpp/Popcorn-dog-2.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            animation: pulse 2s infinite;
         }
-        .header-info h1 {
-            font-size: 48px;
-            margin: 0;
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
         }
-        .header-info p {
-            font-size: 14px;
-            color: #b3b3b3;
-            margin: 5px 0;
+        .main-page {
+            display: none;
         }
-        .cta-button {
-            background-color: #1db954;
-            color: #ffffff;
-            border: none;
-            padding: 12px 30px;
-            font-size: 14px;
-            font-weight: bold;
-            border-radius: 30px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        .playlist {
-            margin-top: 40px;
-        }
-        .playlist h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-        .track-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        .track-item {
+        .header {
+            background-color: #000;
+            padding: 20px 40px;
             display: flex;
             align-items: center;
-            padding: 10px 0;
-            border-bottom: 1px solid #282828;
+            justify-content: space-between;
         }
-        .track-number {
-            font-size: 14px;
-            color: #b3b3b3;
-            width: 30px;
+        .logo-nav {
+            display: flex;
+            align-items: center;
         }
-        .track-image {
-            width: 40px;
-            height: 40px;
-            margin-right: 15px;
-            object-fit: cover;
+        .logo {
+            width: 100px;
+            margin-right: 20px;
         }
-        .track-info {
-            flex-grow: 1;
-        }
-        .track-title {
-            font-size: 16px;
-            margin: 0;
-            color: #ffffff;
+        .nav-item {
+            color: #e5e5e5;
             text-decoration: none;
-        }
-        .track-title:hover {
-            text-decoration: underline;
-        }
-        .track-artist {
+            margin-right: 20px;
             font-size: 14px;
-            color: #b3b3b3;
-            margin: 0;
         }
-        .track-duration {
-            font-size: 14px;
-            color: #b3b3b3;
+        .netflix-header {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 48px;
+            color: #e50914;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .main-content {
+            padding: 40px;
+        }
+        .row {
+            margin-bottom: 40px;
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        .movie-list {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding-bottom: 20px;
+        }
+        .movie-item {
+            width: 200px;
+            height: 300px;
+            background-color: #2f2f2f;
+            border-radius: 4px;
+            transition: transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .movie-item:hover {
+            transform: scale(1.05);
+            z-index: 1;
+        }
+        .movie-item img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: contain;
+        }
+        .movie-item:first-child img {
+            left: 52%; /* Move the first image slightly to the right */
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <img src="https://i.ibb.co/qngKJ0p/Dog-2.png" alt="Spotify Dog" class="profile-pic">
-            <div class="header-info">
-                <h1>Spotify Dog</h1>
-                <p>Playlist • Spotify</p>
-                <p>Created by: Spotify • 4 songs, 13 min 36 sec</p>
-                <button class="cta-button">PLAY</button>
-            </div>
-        </header>
-        <section class="playlist">
-            <h2>Popular</h2>
-            <ul class="track-list">
-                <li class="track-item">
-                    <span class="track-number">1</span>
-                    <img src="https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png" alt="X" class="track-image">
-                    <div class="track-info">
-                        <a href="https://x.com/spotifydogonsol" class="track-title" target="_blank">X</a>  
-                        <p class="track-artist">Elon Musk</p>
-                    </div>
-                    <span class="track-duration">3:17</span>
-                </li>
-                <li class="track-item">
-                    <span class="track-number">2</span>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/182px-Telegram_2019_Logo.svg.png" alt="Telegram" class="track-image">
-                    <div class="track-info">
-                        <a href="https://t.me/SpotifyDogOnSol" class="track-title" target="_blank">Telegram</a>
-                        <p class="track-artist">Pavel Durov</p>
-                    </div>
-                    <span class="track-duration">2:16</span>
-                </li>
-                <li class="track-item">
-                    <span class="track-number">3</span>
-                    <img src="https://docs.dexscreener.com/~gitbook/image?url=https%3A%2F%2F198140802-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F7OmRM9NOmlC1POtFwsnX%252Ficon%252F6BJXvNUMQSXAtDTzDyBK%252Ficon-512x512.png%3Falt%3Dmedia%26token%3Da7ce263e-0b40-4afb-ae25-eae378aef0ab&width=32&dpr=1&quality=100&sign=2d759e0&sv=1" alt="Dexscreener" class="track-image">
-                    <div class="track-info">
-                        <a href="https://open.spotify.com/track/5GtMEZEeFFsuHY8ad4kOxv" class="track-title" target="_blank">Dexscreener</a>
-                        <p class="track-artist">Andreas Diegues and Alexandre Bini</p>
-                    </div>
-                    <span class="track-duration">4:13</span>
-                </li>
-                <li class="track-item">
-                    <span class="track-number">4</span>
-                    <img src="https://pump.fun/_next/image?url=%2Flogo.png&w=32&q=75" alt="Pump.fun" class="track-image">
-                    <div class="track-info">
-                        <a href="https://open.spotify.com/track/1OxcIUqVmVYxT6427tbhDW" class="track-title" target="_blank">Pump.fun</a>
-                        <p class="track-artist">Solana</p>
-                    </div>
-                    <span class="track-duration">4:55</span>
-                </li>
-            </ul>
-        </section>
+    <div class="loading-page">
+        <div class="loading-logo"></div>
     </div>
+    <div class="main-page">
+        <header class="header">
+            <div class="logo-nav">
+                <img src="https://i.postimg.cc/KYtBczpp/Popcorn-dog-2.png" alt="Netflix Dog Logo" class="logo">
+                <nav>
+                    <a href="#" class="nav-item">Home</a>
+                    <a href="#" class="nav-item">TV Shows</a>
+                    <a href="#" class="nav-item">Movies</a>
+                    <a href="#" class="nav-item">New & Popular</a>
+                    <a href="#" class="nav-item">My List</a>
+                </nav>
+            </div>
+            <h1 class="netflix-header">Netflix Dog</h1>
+        </header>
+        <main class="main-content">
+            <section class="row">
+                <h2>Popular on Netflix Dog</h2>
+                <div class="movie-list">
+                    <a href="#" class="movie-item"><img src="https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png" alt="Dog Movie 1"></a>
+                    <a href="#" class="movie-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/182px-Telegram_2019_Logo.svg.png" alt="Dog Movie 2"></a>
+                    <a href="#" class="movie-item"><img src="https://cdn.prod.website-files.com/6421d264d066fd2b24b91b20/661375b92a7e161501f4b5e5_dexscreener.322a5a2d.png" alt="Dog Movie 3"></a>
+                    <a href="#" class="movie-item"><img src="https://pump.fun/icon.png?c2a22dd8671140c9" alt="Dog Movie 4"></a>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        setTimeout(() => {
+            document.querySelector('.loading-page').style.display = 'none';
+            document.querySelector('.main-page').style.display = 'block';
+        }, 3000); // 3000 milliseconds = 3 seconds
+    </script>
 </body>
 </html>
