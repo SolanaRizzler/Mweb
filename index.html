@@ -3,179 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Telegram Dog</title>
+    <title>COD Dog</title>
     <style>
         body, html {
             margin: 0;
             padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: #fff;
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
             height: 100%;
-            overflow: hidden;
         }
         .container {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
-        .header {
-            background-color: #5682a3;
-            color: white;
-            padding: 10px 20px;
+        header {
             display: flex;
             align-items: center;
+            justify-content: space-between;
+            padding: 20px 0;
+            border-bottom: 2px solid #3a3a3a;
         }
-        .header img {
-            width: 40px;
-            height: 40px;
-            margin-right: 15px;
+        .logo {
+            width: 100px;
+            height: auto;
         }
-        .header h1 {
-            margin: 0;
-            font-size: 20px;
-        }
-        .search-bar {
-            padding: 10px 20px;
-            background-color: #f5f5f5;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        .search-bar input {
-            width: 100%;
-            padding: 8px;
-            border: none;
-            border-radius: 20px;
-            background-color: #fff;
-        }
-        .contact-list {
-            flex-grow: 1;
-            overflow-y: auto;
-        }
-        .contact-item {
+        nav ul {
+            list-style-type: none;
+            padding: 0;
             display: flex;
-            align-items: center;
-            padding: 10px 20px;
-            border-bottom: 1px solid #f0f0f0;
-            cursor: pointer;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: #ffffff;
             text-decoration: none;
-            color: inherit;
+            font-weight: bold;
+            text-transform: uppercase;
         }
-        .contact-item:hover {
-            background-color: #f5f5f5;
-        }
-        .contact-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin-right: 15px;
-            overflow: hidden;
-            background-color: #f0f0f0;
+        .hero {
+            background-image: url('https://static.wikia.nocookie.net/callofduty/images/d/d8/A_K9_Unit_in_the_map_Slums.jpg/revision/latest/scale-to-width-down/1781?cb=20220603140851');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
             display: flex;
             align-items: center;
             justify-content: center;
+            text-align: center;
+            margin-top: 20px;
         }
-        .contact-avatar img {
-            max-width: 80%;
-            max-height: 80%;
-            object-fit: contain;
+        .hero h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
-        .contact-info {
-            flex-grow: 1;
+        .content {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
         }
-        .contact-name {
+        .main-content {
+            width: 70%;
+        }
+        .sidebar {
+            width: 25%;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #ff6600;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
             font-weight: bold;
-            margin-bottom: 5px;
+            border-radius: 5px;
+            margin-top: 20px;
         }
-        .contact-last-message {
-            color: #8e8e8e;
-            font-size: 14px;
+        .featured-weapons {
+            margin-top: 40px;
+        }
+        .weapon-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .weapon-card {
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .weapon-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .news-section {
+            margin-top: 40px;
+        }
+        .news-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #3a3a3a;
+        }
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #3a3a3a;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <img src="https://i.postimg.cc/Hxb4jqbp/Tele-dog.png" alt="Teledog Logo">
-            <h1>Telegram Dog</h1>
+        <header>
+            <img src="https://i.ibb.co/KrPj1hh/Cod-dog.png" alt="COD Dog Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="https://x.com/CodDogOnSol">X</a></li>
+                    <li><a href="https://t.me/CodDogOnSolana">Telegram</a></li>
+                    <li><a href="#">Dexscreener</a></li>
+                    <li><a href="#">Pump.fun</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="hero">
+            <h1>Welcome to COD Dog</h1>
         </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search">
-        </div>
-        <div class="contact-list">
-            <a href="https://x.com/TeleDogOnSol" class="contact-item">
-                <div class="contact-avatar">
-                    <img src="https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png" alt="X">
+        
+        <div class="content">
+            <div class="main-content">
+                <h2>Latest Mission</h2>
+                <p>Join the elite canine unit in our latest mission: Operation Bark and Bite. Infiltrate enemy territory, retrieve crucial intel, and show those cats who's boss!</p>
+                <a href="#" class="cta-button">Join Mission</a>
+                
+                <div class="featured-weapons">
+                    <h2>Featured Weapons</h2>
+                    <div class="weapon-grid">
+                        <div class="weapon-card">
+                            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4cdb42ca-4156-485f-a44e-8cf1a38d3ea8/d531kwe-d1617328-41b4-4240-96ec-6ff8e66f0ec4.jpg/v1/fill/w_900,h_675,q_75,strp/awsome_ak47_dog_by_tails68565_d531kwe-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Njc1IiwicGF0aCI6IlwvZlwvNGNkYjQyY2EtNDE1Ni00ODVmLWE0NGUtOGNmMWEzOGQzZWE4XC9kNTMxa3dlLWQxNjE3MzI4LTQxYjQtNDI0MC05NmVjLTZmZjhlNjZmMGVjNC5qcGciLCJ3aWR0aCI6Ijw9OTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.cQY9eJ8FGdnO2UrbDenQtlA3v_2xXIDvmw_GLbOQq3o" alt="Bark-47">
+                            <h3>Bark-47</h3>
+                            <p>High-powered assault rifle</p>
+                        </div>
+                        <div class="weapon-card">
+                            <img src="https://static.independent.co.uk/2022/08/17/12/robot%20dog%20rpg%20russia.jpg" alt="Paw Cannon">
+                            <h3>Paw Cannon</h3>
+                            <p>Heavy-duty grenade launcher</p>
+                        </div>
+                        <div class="weapon-card">
+                            <img src="https://pbs.twimg.com/media/FPPseGHXoAMLrrq.jpg" alt="Sniff Sniper">
+                            <h3>Sniff Sniper</h3>
+                            <p>Long-range precision rifle</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="contact-info">
-                    <div class="contact-name">X</div>
-                    <div class="contact-last-message">Follow Us on X</div>
-                </div>
-            </a>
-            <a href="https://t.me/TeleDogOnSol" class="contact-item">
-                <div class="contact-avatar">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/182px-Telegram_2019_Logo.svg.png" alt="Telegram">
-                </div>
-                <div class="contact-info">
-                    <div class="contact-name">Telegram</div>
-                    <div class="contact-last-message">Join our Telegram</div>
-                </div>
-            </a>
-            <a href="#bone-collectors" class="contact-item">
-                <div class="contact-avatar">
-                    <img src="https://cdn.prod.website-files.com/6421d264d066fd2b24b91b20/661375b92a7e161501f4b5e5_dexscreener.322a5a2d.png" alt="Dexscreener">
-                </div>
-                <div class="contact-info">
-                    <div class="contact-name">Dexscreener</div>
-
-                    <div class="contact-last-message">Free Trending on Me</div>
-                </div>
-            </a>
-            <a href="#paw-patrol" class="contact-item">
-                <div class="contact-avatar">
-                    <img src="https://pump.fun/icon.png?c2a22dd8671140c9" alt="Pump.fun">
-                </div>
-                <div class="contact-info">
-                    <div class="contact-name">Pump.fun</div>
-                    <div class="contact-last-message">Send the Chart!</div>
-                </div>
-            </a>
-            <div class="contact-item">
-                <div class="contact-avatar">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCAuOFjAV2RirB25MLKKQFMRuHPp_6k7q_-w&s" alt="Dog Treats">
-                </div>
-                <div class="contact-info">
-                    <div class="contact-name">Rose</div>
-                    <div class="contact-last-message">Based Dev</div>
+                
+                <div class="news-section">
+                    <h2>Latest News</h2>
+                    <div class="news-item">
+                        <h3>New Map: Kibble Factory</h3>
+                        <p>Explore the treacherous Kibble Factory in our latest map update. Navigate conveyor belts, dodge giant kibble pieces, and secure the ultimate treat!</p>
+                    </div>
+                    <div class="news-item">
+                        <h3>Seasonal Event: Howloween</h3>
+                        <p>Get ready for spooky fun in our Howloween event! Unlock ghostly skins, complete haunted missions, and earn bone-chilling rewards.</p>
+                    </div>
                 </div>
             </div>
-            <div class="contact-item">
-                <div class="contact-avatar">
-                    <img src="https://i.postimg.cc/QMw0FgPq/gk4-Pim-Cv-400x400-removebg-preview.png" alt="Dog Park">
-                </div>
-                <div class="contact-info">
-                    <div class="contact-name">D.BB</div>
-                    <div class="contact-last-message">Your project is overloading my servers</div>
-                </div>
-            </div>
-            <div class="contact-item">
-                <div class="contact-avatar">
-                    <img src="data:image/jpeg;base64,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" alt="Vet Discussions">
-                </div>
-                <div class="contact-info">
-                    <div class="contact-name">Safeguard</div>
-                    <div class="contact-last-message">We are protecting your project</div>
-                </div>
-            </div>
-            <div class="contact-item">
-                <div class="contact-avatar">
-                    <img src="https://i.postimg.cc/kghyHFnd/photo-2024-02-07-21-07-32.jpg" alt="Dog Training">
-                </div>
-                <div class="contact-info">
-                    <div class="contact-name">D.PortalGuard</div>
-                    <div class="contact-last-message">We are protecting your project double</div>
-                </div>
+            <div class="sidebar">
+                <h3>Top Dogs</h3>
+                <ul>
+                    <li>Sergeant Woofles</li>
+                    <li>Captain Pawsome</li>
+                    <li>Major Barkington</li>
+                    <li>Private Snuggles</li>
+                    <li>Corporal Furballs</li>
+                </ul>
+                
+                <h3>Upcoming Events</h3>
+                <ul>
+                    <li>Puppy Training Camp</li>
+                    <li>Canine Warfare Championship</li>
+                    <li>Doggo DLC Release Party</li>
+                </ul>
             </div>
         </div>
+        
+        <footer>
+            <p>&copy; 2024 COD Dog. All rights reserved. Woof!</p>
+            <nav>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </footer>
     </div>
 </body>
 </html>
