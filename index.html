@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COD Dog</title>
+    <title>Nintendo Dog</title>
     <style>
         body, html {
             margin: 0;
             padding: 0;
             font-family: 'Arial', sans-serif;
-            background-color: #1a1a1a;
-            color: #ffffff;
             height: 100%;
+            overflow-x: hidden;
+        }
+        body {
+            background: linear-gradient(to right, #E60012 49.7%, #0AB9E6 49.7%);
         }
         .container {
             max-width: 1200px;
@@ -23,10 +25,9 @@
             align-items: center;
             justify-content: space-between;
             padding: 20px 0;
-            border-bottom: 2px solid #3a3a3a;
         }
         .logo {
-            width: 100px;
+            width: 200px;
             height: auto;
         }
         nav ul {
@@ -44,165 +45,130 @@
             text-transform: uppercase;
         }
         .hero {
-            background-image: url('https://i.postimg.cc/mgjfW37g/2xavjaao0js41-ezgif-com-webp-to-jpg-converter.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 40px;
             text-align: center;
             margin-top: 20px;
         }
         .hero h1 {
-            font-size: 3em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #E60012 50%, #0AB9E6 50%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
         }
-        .content {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 40px;
-        }
-        .main-content {
-            width: 70%;
-        }
-        .sidebar {
-            width: 25%;
+        .hero p {
+            color: #333;
+            font-size: 1.2em;
+            margin-bottom: 30px;
         }
         .cta-button {
             display: inline-block;
-            background-color: #ff6600;
+            background: linear-gradient(to right, #E60012 50%, #0AB9E6 50%);
             color: #ffffff;
             padding: 10px 20px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
-            margin-top: 20px;
         }
-        .featured-weapons {
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
             margin-top: 40px;
         }
-        .weapon-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .weapon-card {
-            background-color: #2a2a2a;
+        .game-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
             padding: 20px;
-            border-radius: 5px;
             text-align: center;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .weapon-card img {
+        .game-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .game-card img {
             width: 100%;
-            height: 150px;
-            object-fit: cover;
+            height: 200px;
+            object-fit: contain;
+            background-color: white;
+            border-radius: 5px;
             margin-bottom: 10px;
         }
-        .news-section {
-            margin-top: 40px;
+        .game-card h3 {
+            margin-bottom: 10px;
         }
-        .news-item {
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #3a3a3a;
+        .game-card:nth-child(odd) h3 {
+            color: #E60012;
+        }
+        .game-card:nth-child(even) h3 {
+            color: #0AB9E6;
+        }
+        .game-card p {
+            color: #333;
         }
         footer {
             margin-top: 40px;
-            padding-top: 20px;
-            border-top: 2px solid #3a3a3a;
             text-align: center;
+            padding: 20px 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #E60012;
+            font-style: italic;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <img src="https://i.ibb.co/KrPj1hh/Cod-dog.png" alt="COD Dog Logo" class="logo">
+            <img src="https://i.postimg.cc/V6KfV73B/Nintendog.png" alt="Nintendo Dog Logo" class="logo">
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="https://x.com/CodDogOnSol">X</a></li>
-                    <li><a href="https://t.me/CodDogOnSolana">Telegram</a></li>
-                    <li><a href="#">Dexscreener</a></li>
-                    <li><a href="#">Pump.fun</a></li>
+                    <li><a href="#">Games</a></li>
+                    <li><a href="#">Characters</a></li>
+                    <li><a href="#">Shop</a></li>
                 </ul>
             </nav>
         </header>
         
         <div class="hero">
-            <h1>Welcome to COD Dog</h1>
+            <h1>Welcome to Nintendo Dog</h1>
+            <p>Embark on pawsome adventures with your favorite Nintendo characters!</p>
+            <a href="#" class="cta-button">Play Now</a>
         </div>
         
-        <div class="content">
-            <div class="main-content">
-                <h2>Latest Mission</h2>
-                <p>Join the elite canine unit in our latest mission: Operation Bark and Bite. Infiltrate enemy territory, retrieve crucial intel, and show those cats who's boss!</p>
-                <a href="#" class="cta-button">Join Mission</a>
-                
-                <div class="featured-weapons">
-                    <h2>Featured Weapons</h2>
-                    <div class="weapon-grid">
-                        <div class="weapon-card">
-                            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4cdb42ca-4156-485f-a44e-8cf1a38d3ea8/d531kwe-d1617328-41b4-4240-96ec-6ff8e66f0ec4.jpg/v1/fill/w_900,h_675,q_75,strp/awsome_ak47_dog_by_tails68565_d531kwe-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Njc1IiwicGF0aCI6IlwvZlwvNGNkYjQyY2EtNDE1Ni00ODVmLWE0NGUtOGNmMWEzOGQzZWE4XC9kNTMxa3dlLWQxNjE3MzI4LTQxYjQtNDI0MC05NmVjLTZmZjhlNjZmMGVjNC5qcGciLCJ3aWR0aCI6Ijw9OTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.cQY9eJ8FGdnO2UrbDenQtlA3v_2xXIDvmw_GLbOQq3o" alt="Bark-47">
-                            <h3>Bark-47</h3>
-                            <p>High-powered assault rifle</p>
-                        </div>
-                        <div class="weapon-card">
-                            <img src="https://static.independent.co.uk/2022/08/17/12/robot%20dog%20rpg%20russia.jpg" alt="Paw Cannon">
-                            <h3>Paw Cannon</h3>
-                            <p>Heavy-duty grenade launcher</p>
-                        </div>
-                        <div class="weapon-card">
-                            <img src="https://pbs.twimg.com/media/FPPseGHXoAMLrrq.jpg" alt="Sniff Sniper">
-                            <h3>Sniff Sniper</h3>
-                            <p>Long-range precision rifle</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="news-section">
-                    <h2>Latest News</h2>
-                    <div class="news-item">
-                        <h3>New Map: Kibble Factory</h3>
-                        <p>Explore the treacherous Kibble Factory in our latest map update. Navigate conveyor belts, dodge giant kibble pieces, and secure the ultimate treat!</p>
-                    </div>
-                    <div class="news-item">
-                        <h3>Seasonal Event: Howloween</h3>
-                        <p>Get ready for spooky fun in our Howloween event! Unlock ghostly skins, complete haunted missions, and earn bone-chilling rewards.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="sidebar">
-                <h3>Top Dogs</h3>
-                <ul>
-                    <li>Sergeant Woofles</li>
-                    <li>Captain Pawsome</li>
-                    <li>Major Barkington</li>
-                    <li>Private Snuggles</li>
-                    <li>Corporal Furballs</li>
-                </ul>
-                
-                <h3>Upcoming Events</h3>
-                <ul>
-                    <li>Puppy Training Camp</li>
-                    <li>Canine Warfare Championship</li>
-                    <li>Doggo DLC Release Party</li>
-                </ul>
-            </div>
+        <div class="game-grid">
+            <a href="https://x.com/NintendoDogSol" class="game-card">
+                <img src="https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png" alt="X">
+                <h3>X</h3>
+                <p>Follow Us on X</p>
+            </a>
+            <a href="https://t.me/NintendoDogSol" class="game-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/182px-Telegram_2019_Logo.svg.png" alt="Telegram">
+                <h3>Telegram</h3>
+                <p>Join our Telegram</p>
+            </a>
+            <a href="#" class="game-card">
+                <img src="https://cdn.prod.website-files.com/6421d264d066fd2b24b91b20/661375b92a7e161501f4b5e5_dexscreener.322a5a2d.png" alt="Dexscreener">
+                <h3>Dexscreener</h3>
+                <p>Soon Come</p>
+            </a>
+            <a href="#" class="game-card">
+                <img src="https://pump.fun/icon.png?c2a22dd8671140c9" alt="Pump.fun">
+                <h3>Pump.fun</h3>
+                <p>Send the Chart!</p>
+            </a>
         </div>
-        
-        <footer>
-            <p>&copy; 2024 COD Dog. All rights reserved. Woof!</p>
-            <nav>
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </nav>
-        </footer>
     </div>
+    
+    <footer>
+        <p>Remember: All dogs go to Nintendo heaven!</p>
+    </footer>
 </body>
 </html>
