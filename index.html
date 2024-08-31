@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pump Dog</title>
+    <title>Phantom Dogg Wallet</title>
     <style>
         body, html {
             margin: 0;
             padding: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #1b1d28;
+            font-family: 'Inter', sans-serif;
+            background-color: #1e1e1e;
             color: #ffffff;
         }
         .container {
@@ -17,208 +17,125 @@
             margin: 0 auto;
             padding: 20px;
         }
-        .header {
+        header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 20px;
-        }
-        .logo-nav {
-            display: flex;
-            align-items: center;
+            margin-bottom: 40px;
         }
         .logo {
-            width: 100px;
-            height: auto;
-            margin-right: 20px;
+            width: 150px;
         }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-        }
-        nav ul li a {
+        nav a {
             color: #ffffff;
             text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
         }
-        .connect-wallet {
+        .hero {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .cta-button {
+            background-color: #512da8;
             color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 25px;
             text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
         }
-        .main-content {
+        .features {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        .feature {
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 10px;
             text-align: center;
         }
-        .start-new-coin {
-            font-size: 2em;
-            margin-bottom: 20px;
+        .feature a {
+            color: #ffffff;
+            text-decoration: none;
+            display: block;
         }
-        .king-of-hill img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
+        .feature img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 15px;
+            object-fit: contain;
         }
-        .info-section {
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-        .pump-dog-logo {
-            width: 100px;
-            height: auto;
-            margin-right: 20px;
-        }
-        .info-text {
-            text-align: left;
-        }
-        .created-by {
-            display: flex;
-            align-items: center;
-            margin-bottom: 5px;
-            color: #3b82f6; /* Changed to blue */
-        }
-        .created-by img {
-            width: 16px;
-            height: 16px;
-            margin-left: 5px;
-            margin-right: 5px;
-        }
-        .market-cap {
-            color: #10b981;
-            margin-bottom: 5px;
-        }
-        .replies {
-            margin-bottom: 5px;
-        }
-        .ticker {
-            font-weight: bold;
-        }
-        .search-container {
+        .social-links {
             display: flex;
             justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
         }
-        .search-bar {
-            display: flex;
-            gap: 10px;
-        }
-        .search-bar input, .search-bar button, .dropdown select {
-            padding: 10px 15px;
-            font-size: 16px;
-            background-color: #86efac;
-            color: #1b1d28;
-            border: none;
-            border-radius: 5px;
-        }
-        .search-bar input {
-            width: 300px;
-        }
-        .search-bar button {
-            cursor: pointer;
-        }
-        .terminal-section {
-            text-align: left;
-        }
-        .terminal-text {
-            color: #86efac;
-            font-size: 18px;
-            font-weight: bold;
-            border-bottom: 2px solid #86efac;
+        .social-links a {
             display: inline-block;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
+            width: 40px;
+            height: 40px;
         }
-        .dropdowns {
-            display: flex;
-            gap: 10px;
-        }
-        .additional-info {
-            margin-top: 20px;
-            text-align: left;
-        }
-        .info-image {
-            width: 100px;
-            height: auto;
-            margin-right: 20px;
+        .social-links img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header class="header">
-            <div class="logo-nav">
-                <img src="https://i.postimg.cc/wMdVNryk/Pump-dogg.png" alt="Pump Dog Logo" class="logo">
-                <nav>
-                    <ul>
-                        <li><a href="https://x.com/DogFunOnSol">[X]</a></li>
-                        <li><a href="https://t.me/DogFunOnSol">[Telegram]</a></li>
-                        <li><a href="#">[Pump.fun]</a></li>
-                        <li><a href="#">[Dexscreener]</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <a href="#" class="connect-wallet">[Connect Wallet]</a>
+        <header>
+            <img src="https://i.postimg.cc/vTQ0jjYZ/Phantom-dogg.png" alt="Phantom Dogg Logo" class="logo">
+            <nav>
+                <a href="#features">Features</a>
+                <a href="#download">Download</a>
+                <a href="#support">Support</a>
+            </nav>
         </header>
         
-        <div class="main-content">
-            <div class="start-new-coin">[start a new coin]</div>
-            <div class="king-of-hill">
-                <img src="https://pump.fun/_next/image?url=%2Fking-of-the-hill.png&w=256&q=75" alt="King of the Hill">
+        <section class="hero">
+            <h1>The Phantom Dogg Wallet</h1>
+            <p>A fast, secure, and user-friendly crypto wallet for the modern age.</p>
+            <a href="#download" class="cta-button">Get Started</a>
+        </section>
+        
+        <section class="features" id="features">
+            <div class="feature">
+                <a href="https://x.com/PhantomDogOnSol" target="_blank">
+                    <img src="https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png" alt="X (Twitter)">
+                    <h3>X (Twitter)</h3>
+                    <p>Stay updated with the latest news and community discussions.</p>
+                </a>
             </div>
-            <div class="info-section">
-                <img src="https://i.postimg.cc/4Nw83yM3/Pump-dog.jpg" alt="Pump Dog Logo" class="pump-dog-logo">
-                <div class="info-text">
-                    <div class="created-by">
-                        Created by
-                        <img src="https://pump.mypinata.cloud/ipfs/QmeSzchzEPqCU1jwTnsipwcBAeH7S4bmVvFGfF65iA1BY1?img-width=16&img-dpr=2&img-onerror=redirect" alt="Me">
-                        Me
-                    </div>
-                    <div class="market-cap">market cap: 6.9M</div>
-                    <div class="replies">replies 420</div>
-                    <div class="ticker">Dog.fun [ticker: PUMP]</div>
-                </div>
+            <div class="feature">
+                <a href="https://t.me/PhantomDogOnSol" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/182px-Telegram_2019_Logo.svg.png" alt="Telegram">
+                    <h3>Telegram</h3>
+                    <p>Join our Telegram group for instant support and updates.</p>
+                </a>
             </div>
-            <div class="search-container">
-                <div class="search-bar">
-                    <input type="text" placeholder="search for token">
-                    <button>Search</button>
-                </div>
+            <div class="feature">
+                <a href="https://dexscreener.com" target="_blank">
+                    <img src="https://cdn.prod.website-files.com/6421d264d066fd2b24b91b20/661375b92a7e161501f4b5e5_dexscreener.322a5a2d.png" alt="DexScreener">
+                    <h3>DexScreener</h3>
+                    <p>Its about to be here.</p>
+                </a>
             </div>
-            <div class="terminal-section">
-                <div class="terminal-text">Terminal</div>
-                <div class="dropdowns">
-                    <div class="dropdown">
-                        <select>
-                            <option>sort: bump order</option>
-                        </select>
-                    </div>
-                    <div class="dropdown">
-                        <select>
-                            <option>order: desc</option>
-                        </select>
-                    </div>
-                </div>
+            <div class="feature">
+                <a href="https://pump.fun" target="_blank">
+                    <img src="https://pump.fun/icon.png?c2a22dd8671140c9" alt="Pump.fun">
+                    <h3>Pump.fun</h3>
+                    <p>Look at the chart mooning.</p>
+                </a>
             </div>
-            <div class="additional-info">
-                <div class="info-section">
-                    <img src="https://pump.mypinata.cloud/ipfs/QmTQrP6R7ieRSbKzwzLAy1i8c2U66b7LM6bSUmK1dfYc5b?img-width=256&img-dpr=2&img-onerror=redirect" alt="Additional Info" class="info-image">
-                    <div class="info-text">
-                        <div class="created-by">
-                            Created by
-                            <img src="https://pump.mypinata.cloud/ipfs/QmeSzchzEPqCU1jwTnsipwcBAeH7S4bmVvFGfF65iA1BY1?img-width=16&img-dpr=2&img-onerror=redirect" alt="FC3nyV">
-                            FC3nyV
-                        </div>
-                        <div class="market-cap">market cap: 106330.42k</div>
-                        <div class="replies">replies: 944</div>
-                        <div class="ticker">michi (ticker: $michi)</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+        </section>
+
+
