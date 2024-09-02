@@ -3,222 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pump Dog</title>
+    <title>Naruto Dog - The Ultimate Crypto Meme Coin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --color-primary: #ff4500; /* Naruto Orange */
+            --color-secondary: #ffffff; /* White */
+            --color-accent: #000000; /* Black */
+            --color-background: #f5f5f5; /* Light Grey */
+            --color-highlight: #ffd700; /* Gold */
+        }
+
         body, html {
             margin: 0;
             padding: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #1b1d28;
-            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--color-background);
+            color: var(--color-accent);
+            overflow-x: hidden;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+
+        header {
+            background-color: var(--color-primary);
+            color: var(--color-secondary);
+            padding: 20px 0;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            font-family: 'Permanent Marker', cursive;
+            letter-spacing: 2px;
         }
-        .header {
+
+        nav {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
+            justify-content: center;
+            background-color: var(--color-accent);
+            padding: 10px 0;
         }
-        .logo-nav {
+
+        nav a {
+            color: var(--color-secondary);
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+            font-family: 'Permanent Marker', cursive;
+        }
+
+        nav a:hover {
+            color: var(--color-highlight);
+        }
+
+        .hero {
+            background-image: url('https://wallpapers.com/images/high/hidden-leaf-village-96kizz8o1c5ev6sf.webp');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
             display: flex;
             align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            color: var(--color-secondary);
         }
-        .logo {
-            width: 100px;
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero img {
+            width: 300px; /* Increased from 200px to 300px */
             height: auto;
-            margin-right: 20px;
+            border-radius: 50%;
+            margin-bottom: 30px; /* Increased from 20px to 30px for better spacing */
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Added a subtle glow effect */
         }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
+
+        .hero h1 {
+            font-size: 64px;
+            margin: 20px 0;
+            font-family: 'Permanent Marker', cursive;
+            letter-spacing: 3px;
         }
-        nav ul li a {
-            color: #ffffff;
+
+        .hero p {
+            font-size: 24px;
+            margin: 20px 0;
+            font-family: 'Permanent Marker', cursive;
+        }
+
+        .cta-button {
+            background-color: var(--color-highlight);
+            color: var(--color-primary);
+            padding: 15px 30px;
+            border-radius: 30px;
             text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            font-size: 18px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .connect-wallet {
-            color: #ffffff;
-            text-decoration: none;
+
+        .cta-button:hover {
+            background-color: var(--color-accent);
+            color: var(--color-secondary);
+            transform: scale(1.05);
         }
-        .main-content {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
+
+        .content {
+            padding: 60px 20px;
             text-align: center;
         }
-        .start-new-coin {
-            font-size: 2em;
+
+        .content h2 {
+            font-size: 48px;
             margin-bottom: 20px;
+            font-family: 'Permanent Marker', cursive;
+            color: var(--color-primary);
         }
-        .king-of-hill img {
-            max-width: 100%;
-            height: auto;
+
+        .content p {
+            font-size: 20px;
             margin-bottom: 20px;
+            font-family: 'Roboto', sans-serif;
         }
-        .info-section {
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            margin-bottom: 20px;
+
+        footer {
+            background-color: var(--color-accent);
+            color: var(--color-secondary);
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
         }
-        .pump-dog-logo {
-            width: 100px;
-            height: auto;
-            margin-right: 20px;
-        }
-        .info-text {
-            text-align: left;
-        }
-        .created-by {
-            display: flex;
-            align-items: center;
-            margin-bottom: 5px;
-            color: #3b82f6; /* Changed to blue */
-        }
-        .created-by img {
-            width: 16px;
-            height: 16px;
-            margin-left: 5px;
-            margin-right: 5px;
-        }
-        .market-cap {
-            color: #10b981;
-            margin-bottom: 5px;
-        }
-        .replies {
-            margin-bottom: 5px;
-        }
-        .ticker {
-            font-weight: bold;
-        }
-        .search-container {
-            display: flex;
-            justify-content: center;
-        }
-        .search-bar {
-            display: flex;
-            gap: 10px;
-        }
-        .search-bar input, .search-bar button, .dropdown select {
-            padding: 10px 15px;
-            font-size: 16px;
-            background-color: #86efac;
-            color: #1b1d28;
-            border: none;
-            border-radius: 5px;
-        }
-        .search-bar input {
-            width: 300px;
-        }
-        .search-bar button {
-            cursor: pointer;
-        }
-        .terminal-section {
-            text-align: left;
-        }
-        .terminal-text {
-            color: #86efac;
-            font-size: 18px;
-            font-weight: bold;
-            border-bottom: 2px solid #86efac;
-            display: inline-block;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-        }
-        .dropdowns {
-            display: flex;
-            gap: 10px;
-        }
-        .additional-info {
+
+        .social-icons {
             margin-top: 20px;
-            text-align: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        .info-image {
-            width: 100px;
-            height: auto;
-            margin-right: 20px;
+
+        .social-icons a {
+            margin: 0 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.1);
+        }
+
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+
+        .social-icons .invert {
+            filter: invert(1);
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="logo-nav">
-                <img src="https://i.postimg.cc/wMdVNryk/Pump-dogg.png" alt="Pump Dog Logo" class="logo">
-                <nav>
-                    <ul>
-                        <li><a href="https://x.com/DogFunOnSolana">[X]</a></li>
-                        <li><a href="https://t.me/DogFunOnSol">[Telegram]</a></li>
-                        <li><a href="#">[Pump.fun]</a></li>
-                        <li><a href="#">[Dexscreener]</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <a href="#" class="connect-wallet">[Connect Wallet]</a>
-        </header>
-        
-        <div class="main-content">
-            <div class="start-new-coin">[start a new coin]</div>
-            <div class="king-of-hill">
-                <img src="https://pump.fun/_next/image?url=%2Fking-of-the-hill.png&w=256&q=75" alt="King of the Hill">
-            </div>
-            <div class="info-section">
-                <img src="https://i.postimg.cc/4Nw83yM3/Pump-dog.jpg" alt="Pump Dog Logo" class="pump-dog-logo">
-                <div class="info-text">
-                    <div class="created-by">
-                        Created by
-                        <img src="https://pump.mypinata.cloud/ipfs/QmeSzchzEPqCU1jwTnsipwcBAeH7S4bmVvFGfF65iA1BY1?img-width=16&img-dpr=2&img-onerror=redirect" alt="Me">
-                        Me
-                    </div>
-                    <div class="market-cap">market cap: 6.9M</div>
-                    <div class="replies">replies 420</div>
-                    <div class="ticker">Dog.fun [ticker: PUMP]</div>
-                </div>
-            </div>
-            <div class="search-container">
-                <div class="search-bar">
-                    <input type="text" placeholder="search for token">
-                    <button>Search</button>
-                </div>
-            </div>
-            <div class="terminal-section">
-                <div class="terminal-text">Terminal</div>
-                <div class="dropdowns">
-                    <div class="dropdown">
-                        <select>
-                            <option>sort: bump order</option>
-                        </select>
-                    </div>
-                    <div class="dropdown">
-                        <select>
-                            <option>order: desc</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="additional-info">
-                <div class="info-section">
-                    <img src="https://pump.mypinata.cloud/ipfs/QmTQrP6R7ieRSbKzwzLAy1i8c2U66b7LM6bSUmK1dfYc5b?img-width=256&img-dpr=2&img-onerror=redirect" alt="Additional Info" class="info-image">
-                    <div class="info-text">
-                        <div class="created-by">
-                            Created by
-                            <img src="https://pump.mypinata.cloud/ipfs/QmeSzchzEPqCU1jwTnsipwcBAeH7S4bmVvFGfF65iA1BY1?img-width=16&img-dpr=2&img-onerror=redirect" alt="FC3nyV">
-                            FC3nyV
-                        </div>
-                        <div class="market-cap">market cap: 106330.42k</div>
-                        <div class="replies">replies: 944</div>
-                        <div class="ticker">michi (ticker: $michi)</div>
-                    </div>
-                </div>
-            </div>
+    <header>
+        Naruto Dog
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="hero" id="home">
+        <div class="hero-content">
+            <img src="https://i.postimg.cc/DZMgpM4L/naruto-dog.png" alt="Naruto Dog Logo">
+            <h1>Naruto Dog</h1>
+            <p>Join the Ninja Clan of Crypto Enthusiasts</p>
+            <a href="#roadmap" class="cta-button">Learn More</a>
         </div>
     </div>
+
+    <div class="content" id="about">
+        <h2>About Naruto Dog</h2>
+        <p>Naruto Dog is a community-driven crypto meme coin inspired by the adventures of Naruto Uzumaki. Our mission is to bring the ninja spirit to the crypto world, creating a fun and engaging experience for all our holders.</p>
+    </div>
+
+    <div class="content" id="roadmap">
+        <h2>Roadmap</h2>
+        <p>Our roadmap outlines our plans for the future, including exchange listings, partnerships, and community events once we hit certain milestones. Stay tuned for exciting updates as we continue to grow and expand the Naruto Dog ecosystem.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Naruto Dog. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://x.com/NarutoDogSolana" target="_blank" rel="noopener noreferrer">
+                <img src="https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png" alt="Twitter X Logo" class="invert">
+            </a>
+            <a href="https://t.me/NarutoDogOnSol" target="_blank" rel="noopener noreferrer">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/182px-Telegram_2019_Logo.svg.png" alt="Telegram Logo">
+            </a>
+            <a href="https://dexscreener.com" target="_blank" rel="noopener noreferrer">
+                <img src="https://cdn.prod.website-files.com/6421d264d066fd2b24b91b20/661375b92a7e161501f4b5e5_dexscreener.322a5a2d.png" alt="DexScreener Logo" class="invert">
+            </a>
+            <a href="https://pump.fun" target="_blank" rel="noopener noreferrer">
+                <img src="https://pump.fun/icon.png?c2a22dd8671140c9" alt="Pump Fun Logo">
+            </a>
+        </div>
+    </footer>
 </body>
 </html>
