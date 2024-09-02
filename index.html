@@ -3,183 +3,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One Piece Themed Page</title>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <title>Star Wars Robo-Dogs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        :root {
+            --background-color: #0A0E17;
+            --text-color: #E5E5E5;
+            --accent-color: #3B82F6;
+            --secondary-color: #6B7280;
+        }
+
         body {
-            background-color: #40E0D0; /* Turquoise Blue */
-            color: #000;
-            font-family: 'Oswald', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: 'Orbitron', sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-            cursor: url('https://i.postimg.cc/15v8nJFg/pngegg.png'), auto; /* Ship cursor */
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="%23E5E5E5"><path d="M13 5.5V2L3 12l10 10v-3.5l-6-6 6-6z"/></svg>'), auto;
         }
 
-        .header {
-            background-color: #FFD700; /* Yellow */
-            color: #FF0000; /* Red */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            font-size: 3em;
             text-align: center;
-            padding: 10px;
-            font-size: 1.5em;
-            width: 100%;
+            margin-bottom: 40px;
+            text-shadow: 0 0 10px var(--accent-color);
         }
 
-        .navbar {
-            background-color: #000;
-            color: #FFF;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            padding: 10px 0;
+        h2 {
+            font-size: 2em;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-top: 40px;
         }
 
-        .navbar a {
-            color: #FFF;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.2em;
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+
+        .robot-part {
+            background-color: rgba(59, 130, 246, 0.1);
+            border: 1px solid var(--accent-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .robot-part::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, var(--accent-color), transparent);
+            z-index: -1;
+            filter: blur(20px);
+            opacity: 0.3;
+        }
+
+        .button {
+            background-color: var(--accent-color);
+            color: var(--background-color);
+            padding: 12px 24px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin: 10px 0;
+        }
+
+        .button:hover {
+            background-color: var(--text-color);
+            color: var(--background-color);
+            box-shadow: 0 0 20px var(--accent-color);
+        }
+
+        /* Futuristic ship-inspired layout elements */
+        .ship-console {
+            background-color: rgba(59, 130, 246, 0.05);
+            border: 2px solid var(--accent-color);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 30px 0;
+            position: relative;
+        }
+
+        .ship-console::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            height: 2px;
+            background-color: var(--accent-color);
+            box-shadow: 0 0 10px var(--accent-color);
+        }
+
+        .ship-display {
+            font-family: 'Courier New', monospace;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: var(--accent-color);
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 0.9em;
+            line-height: 1.4;
         }
 
         .main-image {
-            margin: 20px 0;
+            display: block;
             max-width: 100%;
             height: auto;
+            margin: 20px auto 40px;
+            border-radius: 10px;
+            /* Removed: box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); */
+            animation: drive 3s ease-in-out infinite;
         }
 
-        .character-name {
-            color: #FFD700; /* Yellow */
-            font-size: 4em; /* Significantly increased font size */
-            font-weight: bold; /* Bold text */
-            margin: 10px 0;
-            text-align: center;
+        @keyframes drive {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-10px) rotate(-1deg);
+            }
+            75% {
+                transform: translateX(10px) rotate(1deg);
+            }
         }
 
-        .about {
-            background-color: #FFF;
-            padding: 20px;
-            width: 80%;
-            text-align: center;
-            box-shadow: 3px 3px 0 #000;
-            margin-bottom: 20px;
-            position: relative;
+        .main-image:hover {
+            animation: hover 1s ease-in-out infinite;
         }
 
-        .content {
-            padding: 10px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-            width: 80%;
-        }
-
-        .comic-panel {
-            border: 3px solid #000;
-            margin: 5px;
-            padding: 10px;
-            background-color: #FFF;
-            width: 45%;
-            box-shadow: 3px 3px 0 #000;
-            box-sizing: border-box;
-        }
-
-        .footer {
-            background-color: #FFD700; /* Yellow */
-            color: #000; /* Black text */
-            text-align: center;
-            padding: 10px;
-            width: 100%;
-            margin-top: 20px;
-        }
-
-        .footer a {
-            color: #000; /* Black */
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 1.2em;
-        }
-
-        .footer img {
-            width: 30px;
-            height: 30px;
-            margin: 0 10px;
-            vertical-align: middle;
-        }
-
-        .footer img.x-logo {
-            width: 25px; /* Smaller width for X logo */
-            height: 25px; /* Smaller height for X logo */
-        }
-
-        .ship-image {
-            position: absolute;
-            right: -100px; /* Start off-screen */
-            top: 50%;
-            transform: translateY(-50%);
-            width: 150px;
-            height: auto;
-            animation: sail 10s linear infinite;
-        }
-
-        @keyframes sail {
-            0% {
-                right: -150px; /* Start off-screen */
+        @keyframes hover {
+            0%, 100% {
+                transform: translateY(0);
             }
             50% {
-                right: 10px; /* Move to the right side of the text box */
+                transform: translateY(-5px);
             }
-            100% {
-                right: -150px; /* Move back off-screen */
-            }
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: -20px 0 20px;
+        }
+
+        .social-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            color: var(--background-color);
+            font-size: 18px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .social-button:hover {
+            background-color: var(--background-color);
+            color: var(--accent-color);
+            border-color: var(--accent-color);
+            box-shadow: 0 0 10px var(--accent-color);
+        }
+
+        /* For the DEX and PUMP buttons */
+        .social-button:nth-child(3),
+        .social-button:nth-child(4) {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .pump-fun {
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .pump-icon {
+            width: 80%;  /* Reduced from 100% */
+            height: 80%;  /* Reduced from 100% */
+            object-fit: contain;  /* Changed from cover to maintain aspect ratio */
+            margin: auto;  /* Center the image */
+            display: block;  /* Ensure proper centering */
+        }
+
+        .dex-screener {
+            padding: 0;
+            overflow: hidden;
+            /* Removed: background-color: white; */
+        }
+
+        .dex-icon {
+            width: 80%;
+            height: 80%;
+            object-fit: contain;
+            margin: auto;
+            display: block;
         }
     </style>
 </head>
 <body>
-    <div class="header">Welcome to the One Piece World!</div>
-    <div class="navbar">
-        <a href="#about">About</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-    </div>
-    <img src="https://i.postimg.cc/Vv09NpGc/Monkey-DLuffy.png" alt="Monkey D. Luffy" class="main-image">
-    <div class="character-name">Monkey D. Luffy</div>
-    <div id="about" class="about">
-        <h2>About Us</h2>
-        <p>We are an anime production company dedicated to bringing the world of One Piece to life. Join us on an adventure as we explore the Grand Line and beyond!</p>
-        <img src="https://i.postimg.cc/15v8nJFg/pngegg.png" alt="Ship" class="ship-image">
-    </div>
-    <div id="gallery" class="content">
-        <div class="comic-panel">
-            <p>"I'm going to be the Pirate King!" - Luffy</p>
+    <div class="container">
+        <h1>R2-Dog2: A Jedi's Best Friend</h1>
+        
+        <div class="social-links">
+            <a href="https://x.com/R2Dog2Solana" class="social-button" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://t.me/R2Dog2onSol" class="social-button" aria-label="Telegram">
+                <i class="fab fa-telegram-plane"></i>
+            </a>
+            <a href="#" class="social-button dex-screener" aria-label="Dexscreener">
+                <img src="https://cdn.prod.website-files.com/6421d264d066fd2b24b91b20/661375b92a7e161501f4b5e5_dexscreener.322a5a2d.png" alt="Dexscreener" class="dex-icon">
+            </a>
+            <a href="#" class="social-button pump-fun" aria-label="Pump.fun">
+                <img src="https://pump.fun/icon.png?c2a22dd8671140c9" alt="Pump.fun" class="pump-icon">
+            </a>
         </div>
-        <div class="comic-panel">
-            <p>"I love adventure!" - Luffy</p>
+        
+        <img src="https://i.postimg.cc/pXykvbCr/R2dod.png" alt="R2-Dog2 Robotic Dog" class="main-image">
+        
+        <div class="ship-console">
+            <h2>System Status</h2>
+            <div class="ship-display">
+                > Initializing R2-Dog2 systems...
+                > Servo motors: Online
+                > AI Core: Operational
+                > Loyalty Protocols: Activated
+            </div>
         </div>
-        <div class="comic-panel">
-            <p>"I don't want to conquer anything. I just think the guy with the most freedom in this whole ocean... is the Pirate King!" - Luffy</p>
+
+        <div class="robot-part">
+            <h3>Maintenance Report</h3>
+            <p>All systems are functioning within optimal parameters. Regular oil change recommended in 7 galactic standard days.</p>
         </div>
-        <div class="comic-panel">
-            <p>This is a comic panel with anime-style animation.</p>
-        </div>
-        <!-- Add more comic panels as needed -->
-    </div>
-    <div id="contact" class="footer">
-        <a href="https://t.me/MonkeyDLuffySol" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
-        </a>
-        <a href="https://x.com/SolMonkeyDLuffy" target="_blank">
-            <img src="https://i.postimg.cc/RZrDf5Hh/X-Logo.png" alt="X" class="x-logo">
-        </a>
-        <a href="https://dex.com/yourdex" target="_blank">
-            <img src="https://cdn.prod.website-files.com/6421d264d066fd2b24b91b20/661375b92a7e161501f4b5e5_dexscreener.322a5a2d.png" alt="Dex">
-        </a>
-        <a href="https://pumpfun.com/yourpumpfun" target="_blank">
-            <img src="https://pump.fun/icon.png?c2a22dd8671140c9" alt="Pump fun">
-        </a>
+
+        <button class="button">Activate Play Mode</button>
     </div>
 </body>
 </html>
