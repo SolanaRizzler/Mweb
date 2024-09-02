@@ -3,229 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naruto Dog - The Ultimate Crypto Meme Coin</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <title>One Piece Themed Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --color-primary: #ff4500; /* Naruto Orange */
-            --color-secondary: #ffffff; /* White */
-            --color-accent: #000000; /* Black */
-            --color-background: #f5f5f5; /* Light Grey */
-            --color-highlight: #ffd700; /* Gold */
-        }
-
-        body, html {
+        body {
+            background-color: #40E0D0; /* Turquoise Blue */
+            color: #000;
+            font-family: 'Oswald', sans-serif;
             margin: 0;
             padding: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: var(--color-background);
-            color: var(--color-accent);
-            overflow-x: hidden;
-        }
-
-        header {
-            background-color: var(--color-primary);
-            color: var(--color-secondary);
-            padding: 20px 0;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-            font-family: 'Permanent Marker', cursive;
-            letter-spacing: 2px;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: var(--color-accent);
-            padding: 10px 0;
-        }
-
-        nav a {
-            color: var(--color-secondary);
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: bold;
-            transition: color 0.3s;
-            font-family: 'Permanent Marker', cursive;
-        }
-
-        nav a:hover {
-            color: var(--color-highlight);
-        }
-
-        .hero {
-            background-image: url('https://wallpapers.com/images/high/hidden-leaf-village-96kizz8o1c5ev6sf.webp');
-            background-size: cover;
-            background-position: center;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-            color: var(--color-secondary);
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
+            position: relative;
+            cursor: url('https://i.postimg.cc/15v8nJFg/pngegg.png'), auto; /* Ship cursor */
         }
 
-        .hero img {
-            width: 300px; /* Increased from 200px to 300px */
-            height: auto;
-            border-radius: 50%;
-            margin-bottom: 30px; /* Increased from 20px to 30px for better spacing */
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Added a subtle glow effect */
+        .header {
+            background-color: #FFD700; /* Yellow */
+            color: #FF0000; /* Red */
+            text-align: center;
+            padding: 10px;
+            font-size: 1.5em;
+            width: 100%;
         }
 
-        .hero h1 {
-            font-size: 64px;
-            margin: 20px 0;
-            font-family: 'Permanent Marker', cursive;
-            letter-spacing: 3px;
+        .navbar {
+            background-color: #000;
+            color: #FFF;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
         }
 
-        .hero p {
-            font-size: 24px;
-            margin: 20px 0;
-            font-family: 'Permanent Marker', cursive;
-        }
-
-        .cta-button {
-            background-color: var(--color-highlight);
-            color: var(--color-primary);
-            padding: 15px 30px;
-            border-radius: 30px;
+        .navbar a {
+            color: #FFF;
             text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 20px;
-            transition: all 0.3s ease;
-            font-size: 18px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 0 15px;
+            font-size: 1.2em;
         }
 
-        .cta-button:hover {
-            background-color: var(--color-accent);
-            color: var(--color-secondary);
-            transform: scale(1.05);
+        .main-image {
+            margin: 20px 0;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .character-name {
+            color: #FFD700; /* Yellow */
+            font-size: 4em; /* Significantly increased font size */
+            font-weight: bold; /* Bold text */
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .about {
+            background-color: #FFF;
+            padding: 20px;
+            width: 80%;
+            text-align: center;
+            box-shadow: 3px 3px 0 #000;
+            margin-bottom: 20px;
+            position: relative;
         }
 
         .content {
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .content h2 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            font-family: 'Permanent Marker', cursive;
-            color: var(--color-primary);
-        }
-
-        .content p {
-            font-size: 20px;
-            margin-bottom: 20px;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        footer {
-            background-color: var(--color-accent);
-            color: var(--color-secondary);
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-        }
-
-        .social-icons {
-            margin-top: 20px;
+            padding: 10px;
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            align-items: center;
+            gap: 10px;
+            width: 80%;
         }
 
-        .social-icons a {
-            margin: 0 15px;
-            transition: transform 0.3s ease;
+        .comic-panel {
+            border: 3px solid #000;
+            margin: 5px;
+            padding: 10px;
+            background-color: #FFF;
+            width: 45%;
+            box-shadow: 3px 3px 0 #000;
+            box-sizing: border-box;
         }
 
-        .social-icons a:hover {
-            transform: scale(1.1);
+        .footer {
+            background-color: #FFD700; /* Yellow */
+            color: #000; /* Black text */
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            margin-top: 20px;
         }
 
-        .social-icons img {
+        .footer a {
+            color: #000; /* Black */
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.2em;
+        }
+
+        .footer img {
             width: 30px;
             height: 30px;
-            object-fit: contain;
+            margin: 0 10px;
+            vertical-align: middle;
         }
 
-        .social-icons .invert {
-            filter: invert(1);
+        .footer img.x-logo {
+            width: 25px; /* Smaller width for X logo */
+            height: 25px; /* Smaller height for X logo */
+        }
+
+        .ship-image {
+            position: absolute;
+            right: -100px; /* Start off-screen */
+            top: 50%;
+            transform: translateY(-50%);
+            width: 150px;
+            height: auto;
+            animation: sail 10s linear infinite;
+        }
+
+        @keyframes sail {
+            0% {
+                right: -150px; /* Start off-screen */
+            }
+            50% {
+                right: 10px; /* Move to the right side of the text box */
+            }
+            100% {
+                right: -150px; /* Move back off-screen */
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        Naruto Dog
-    </header>
-
-    <nav>
-        <a href="#home">Home</a>
+    <div class="header">Welcome to the One Piece World!</div>
+    <div class="navbar">
         <a href="#about">About</a>
-        <a href="#roadmap">Roadmap</a>
+        <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="hero" id="home">
-        <div class="hero-content">
-            <img src="https://i.postimg.cc/DZMgpM4L/naruto-dog.png" alt="Naruto Dog Logo">
-            <h1>Naruto Dog</h1>
-            <p>Join the Ninja Clan of Crypto Enthusiasts</p>
-            <a href="#roadmap" class="cta-button">Learn More</a>
+    </div>
+    <img src="https://i.postimg.cc/Vv09NpGc/Monkey-DLuffy.png" alt="Monkey D. Luffy" class="main-image">
+    <div class="character-name">Monkey D. Luffy</div>
+    <div id="about" class="about">
+        <h2>About Us</h2>
+        <p>We are an anime production company dedicated to bringing the world of One Piece to life. Join us on an adventure as we explore the Grand Line and beyond!</p>
+        <img src="https://i.postimg.cc/15v8nJFg/pngegg.png" alt="Ship" class="ship-image">
+    </div>
+    <div id="gallery" class="content">
+        <div class="comic-panel">
+            <p>"I'm going to be the Pirate King!" - Luffy</p>
         </div>
-    </div>
-
-    <div class="content" id="about">
-        <h2>About Naruto Dog</h2>
-        <p>Naruto Dog is a community-driven crypto meme coin inspired by the adventures of Naruto Uzumaki. Our mission is to bring the ninja spirit to the crypto world, creating a fun and engaging experience for all our holders.</p>
-    </div>
-
-    <div class="content" id="roadmap">
-        <h2>Roadmap</h2>
-        <p>Our roadmap outlines our plans for the future, including exchange listings, partnerships, and community events once we hit certain milestones. Stay tuned for exciting updates as we continue to grow and expand the Naruto Dog ecosystem.</p>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 Naruto Dog. All rights reserved.</p>
-        <div class="social-icons">
-            <a href="https://x.com/NarutoDogSolana" target="_blank" rel="noopener noreferrer">
-                <img src="https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png" alt="Twitter X Logo" class="invert">
-            </a>
-            <a href="https://t.me/NarutoDogOnSol" target="_blank" rel="noopener noreferrer">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/182px-Telegram_2019_Logo.svg.png" alt="Telegram Logo">
-            </a>
-            <a href="https://dexscreener.com" target="_blank" rel="noopener noreferrer">
-                <img src="https://cdn.prod.website-files.com/6421d264d066fd2b24b91b20/661375b92a7e161501f4b5e5_dexscreener.322a5a2d.png" alt="DexScreener Logo" class="invert">
-            </a>
-            <a href="https://pump.fun" target="_blank" rel="noopener noreferrer">
-                <img src="https://pump.fun/icon.png?c2a22dd8671140c9" alt="Pump Fun Logo">
-            </a>
+        <div class="comic-panel">
+            <p>"I love adventure!" - Luffy</p>
         </div>
-    </footer>
+        <div class="comic-panel">
+            <p>"I don't want to conquer anything. I just think the guy with the most freedom in this whole ocean... is the Pirate King!" - Luffy</p>
+        </div>
+        <div class="comic-panel">
+            <p>This is a comic panel with anime-style animation.</p>
+        </div>
+        <!-- Add more comic panels as needed -->
+    </div>
+    <div id="contact" class="footer">
+        <a href="https://t.me/yourtelegram" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+        </a>
+        <a href="https://twitter.com/yourtwitter" target="_blank">
+            <img src="https://i.postimg.cc/RZrDf5Hh/X-Logo.png" alt="X" class="x-logo">
+        </a>
+        <a href="https://dex.com/yourdex" target="_blank">
+            <img src="https://cdn.prod.website-files.com/6421d264d066fd2b24b91b20/661375b92a7e161501f4b5e5_dexscreener.322a5a2d.png" alt="Dex">
+        </a>
+        <a href="https://pumpfun.com/yourpumpfun" target="_blank">
+            <img src="https://pump.fun/icon.png?c2a22dd8671140c9" alt="Pump fun">
+        </a>
+    </div>
 </body>
 </html>
