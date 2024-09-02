@@ -3,356 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Princess of Money - Magical Wealth & Business</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Dancing+Script:wght@700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <title>Pump Dog</title>
     <style>
-        :root {
-            --color-primary: #00a86b;
-            --color-secondary: #f0e68c;
-            --color-accent: #98fb98;
-            --color-background: #f5f5f5;
-            --color-text: #333333;
-        }
-
         body, html {
             margin: 0;
             padding: 0;
-            font-family: 'Quicksand', sans-serif;
-            background-color: var(--color-background);
-            color: var(--color-text);
-            overflow-x: hidden;
+            font-family: 'Arial', sans-serif;
+            background-color: #1b1d28;
+            color: #ffffff;
         }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
-
-        header {
-            background-color: var(--color-primary);
-            padding: 20px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        nav {
+        .header {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: 600;
-            font-size: 18px;
-            transition: all 0.3s ease;
-            font-family: 'Cinzel', serif;
-        }
-
-        nav a:hover {
-            color: var(--color-secondary);
-            transform: scale(1.1);
-        }
-
-        .hero {
-            background-image: url('https://example.com/princess-money-castle.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 168, 107, 0.3);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .hero-logo {
-            width: 400px;
-            height: auto;
-            margin-bottom: 30px;
-        }
-
-        h1 {
-            font-family: 'Dancing Script', cursive;
-            font-size: 68px;
             margin-bottom: 20px;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
-
-        .cta-button {
-            background-color: var(--color-secondary);
-            color: var(--color-text);
-            padding: 15px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 20px;
-            transition: all 0.3s ease;
-            font-size: 18px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            font-family: 'Cinzel', serif;
-        }
-
-        .cta-button:hover {
-            background-color: var(--color-accent);
-            color: var(--color-text);
-            transform: scale(1.05);
-        }
-
-        .section {
-            margin: 60px 0;
-            padding: 40px;
-            background-color: white;
-            border-radius: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .section::before {
-            content: '';
-            position: absolute;
-            top: -50px;
-            left: -50px;
-            width: 100px;
-            height: 100px;
-            background-image: url('https://example.com/crown-dollar-icon.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            opacity: 0.1;
-        }
-
-        .section h2 {
-            font-family: 'Dancing Script', cursive;
-            font-size: 56px;
-            color: var(--color-primary);
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .wealth-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .stat-card {
-            text-align: center;
-            padding: 20px;
-            background-color: var(--color-background);
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .stat-card h3 {
-            font-size: 24px;
-            color: var(--color-primary);
-            margin-bottom: 10px;
-            font-family: 'Cinzel', serif;
-        }
-
-        .stat-card p {
-            font-size: 36px;
-            font-weight: bold;
-            color: var(--color-secondary);
-        }
-
-        .stock-ticker {
-            background-color: var(--color-secondary);
-            padding: 10px 0;
-            overflow: hidden;
-            white-space: nowrap;
-            margin-top: 40px;
-        }
-
-        .ticker-content {
-            display: inline-block;
-            animation: ticker 30s linear infinite;
-            font-family: 'Cinzel', serif;
-            color: var(--color-text);
-        }
-
-        @keyframes ticker {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
-        }
-
-        footer {
-            background-color: var(--color-primary);
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 60px;
-        }
-
-        .social-icons {
-            margin-top: 20px;
+        .logo-nav {
             display: flex;
-            justify-content: center;
             align-items: center;
         }
-
-        .social-icons a {
-            margin: 0 15px;
-            transition: transform 0.3s ease;
+        .logo {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
         }
-
-        .social-icons a:hover {
-            transform: scale(1.1);
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
         }
-
-        .social-icons img {
-            width: 30px;
-            height: 30px;
-            object-fit: contain;
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
         }
-
-        @keyframes sparkle {
-            0%, 100% { opacity: 0; transform: scale(0); }
-            50% { opacity: 1; transform: scale(1); }
+        .connect-wallet {
+            color: #ffffff;
+            text-decoration: none;
         }
-
-        .sparkle {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background-color: var(--color-secondary);
-            border-radius: 50%;
-            pointer-events: none;
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            text-align: center;
+        }
+        .start-new-coin {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .king-of-hill img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .info-section {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .pump-dog-logo {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
+        }
+        .info-text {
+            text-align: left;
+        }
+        .created-by {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+            color: #3b82f6; /* Changed to blue */
+        }
+        .created-by img {
+            width: 16px;
+            height: 16px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        .market-cap {
+            color: #10b981;
+            margin-bottom: 5px;
+        }
+        .replies {
+            margin-bottom: 5px;
+        }
+        .ticker {
+            font-weight: bold;
+        }
+        .search-container {
+            display: flex;
+            justify-content: center;
+        }
+        .search-bar {
+            display: flex;
+            gap: 10px;
+        }
+        .search-bar input, .search-bar button, .dropdown select {
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #86efac;
+            color: #1b1d28;
+            border: none;
+            border-radius: 5px;
+        }
+        .search-bar input {
+            width: 300px;
+        }
+        .search-bar button {
+            cursor: pointer;
+        }
+        .terminal-section {
+            text-align: left;
+        }
+        .terminal-text {
+            color: #86efac;
+            font-size: 18px;
+            font-weight: bold;
+            border-bottom: 2px solid #86efac;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        .dropdowns {
+            display: flex;
+            gap: 10px;
+        }
+        .additional-info {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .info-image {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#wealth-stats">Wealth Stats</a>
-            <a href="#investments">Investments</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <div class="hero">
-        <div class="hero-content">
-            <img src="https://i.postimg.cc/sgBzyfdZ/Printcess.png" alt="Printcess Logo" class="hero-logo">
-            <h1>Printcess</h1>
-            <p>Where Fairy Tales Meet Financial Success</p>
-            <a href="#join" class="cta-button">Start Your Wealth Journey</a>
-        </div>
-    </div>
-
     <div class="container">
-        <section id="about" class="section">
-            <h2>The Royal Financial Tale</h2>
-            <p>In a kingdom where dreams and digital coins danced together, there lived Printcess Goldwyn, the Princess of Crypto. Her realm, Cryptoria, was a land of glittering digital castles, blockchain rivers, and emerald data trees, all powered by the magic of decentralized finance.
-
-                Printcess was a visionary, turning ideas into digital gold. She founded the Royal Crypto Exchange, where citizens could trade their dreams as tokens and build their futures. Her greatest creation was the Crown Coin, a currency that empowered her people and made wealth accessible to all.
-                
-                But when the spirit of Greed, a hacker named Avarice, tried to corrupt her network, Printcess showed her kingdom the true power of community and transparency. With wisdom and innovation, she secured Cryptoria’s blockchain, proving that in the right hands, crypto could turn dreams into reality.
-                
-                Under her rule, Cryptoria flourished, and Printcess’s legacy as the Princess of Crypto proved that digital wealth was more than a fantasy—it was the future.</p>
-            <!-- Add more content about the princess's financial journey -->
-        </section>
-
-        <section id="wealth-stats" class="section">
-            <h2>Royal Wealth Statistics</h2>
-            <div class="wealth-stats">
-                <div class="stat-card">
-                    <h3>Kingdom GDP</h3>
-                    <p>$1.2T</p>
-                </div>
-                <div class="stat-card">
-                    <h3>Royal Investments</h3>
-                    <p>$500B</p>
-                </div>
-                <div class="stat-card">
-                    <h3>Charity Donations</h3>
-                    <p>$50B</p>
+        <header class="header">
+            <div class="logo-nav">
+                <img src="https://i.postimg.cc/wMdVNryk/Pump-dogg.png" alt="Pump Dog Logo" class="logo">
+                <nav>
+                    <ul>
+                        <li><a href="https://x.com/DogFunOnSolana">[X]</a></li>
+                        <li><a href="https://t.me/DogFunOnSol">[Telegram]</a></li>
+                        <li><a href="#">[Pump.fun]</a></li>
+                        <li><a href="#">[Dexscreener]</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <a href="#" class="connect-wallet">[Connect Wallet]</a>
+        </header>
+        
+        <div class="main-content">
+            <div class="start-new-coin">[start a new coin]</div>
+            <div class="king-of-hill">
+                <img src="https://pump.fun/_next/image?url=%2Fking-of-the-hill.png&w=256&q=75" alt="King of the Hill">
+            </div>
+            <div class="info-section">
+                <img src="https://i.postimg.cc/4Nw83yM3/Pump-dog.jpg" alt="Pump Dog Logo" class="pump-dog-logo">
+                <div class="info-text">
+                    <div class="created-by">
+                        Created by
+                        <img src="https://pump.mypinata.cloud/ipfs/QmeSzchzEPqCU1jwTnsipwcBAeH7S4bmVvFGfF65iA1BY1?img-width=16&img-dpr=2&img-onerror=redirect" alt="Me">
+                        Me
+                    </div>
+                    <div class="market-cap">market cap: 6.9M</div>
+                    <div class="replies">replies 420</div>
+                    <div class="ticker">Dog.fun [ticker: PUMP]</div>
                 </div>
             </div>
-        </section>
-
-        <section id="investments" class="section">
-            <h2>Magical Market Insights</h2>
-            <p>Buy $Print and get rich</p>
-            <!-- Add content about investment strategies -->
-        </section>
-
-        <div class="stock-ticker">
-            <div class="ticker-content">
-                PRNCS +2.5% | CSTL +1.8% | CRWN -0.3% | JWEL +3.2% | GOLD +0.7% | SILV +1.1% | PRINT + 1337%
+            <div class="search-container">
+                <div class="search-bar">
+                    <input type="text" placeholder="search for token">
+                    <button>Search</button>
+                </div>
+            </div>
+            <div class="terminal-section">
+                <div class="terminal-text">Terminal</div>
+                <div class="dropdowns">
+                    <div class="dropdown">
+                        <select>
+                            <option>sort: bump order</option>
+                        </select>
+                    </div>
+                    <div class="dropdown">
+                        <select>
+                            <option>order: desc</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="additional-info">
+                <div class="info-section">
+                    <img src="https://pump.mypinata.cloud/ipfs/QmTQrP6R7ieRSbKzwzLAy1i8c2U66b7LM6bSUmK1dfYc5b?img-width=256&img-dpr=2&img-onerror=redirect" alt="Additional Info" class="info-image">
+                    <div class="info-text">
+                        <div class="created-by">
+                            Created by
+                            <img src="https://pump.mypinata.cloud/ipfs/QmeSzchzEPqCU1jwTnsipwcBAeH7S4bmVvFGfF65iA1BY1?img-width=16&img-dpr=2&img-onerror=redirect" alt="FC3nyV">
+                            FC3nyV
+                        </div>
+                        <div class="market-cap">market cap: 106330.42k</div>
+                        <div class="replies">replies: 944</div>
+                        <div class="ticker">michi (ticker: $michi)</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-    <footer>
-        <div class="container">
-            <div class="social-icons">
-                <a href="https://x.com/PrintcessOnSol" target="_blank" rel="noopener noreferrer">
-                    <img src="https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png" alt="Twitter X Logo">
-                </a>
-                <a href="https://t.me/PrintcessOnSol" target="_blank" rel="noopener noreferrer">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/182px-Telegram_2019_Logo.svg.png" alt="Telegram Logo">
-                </a>
-                <a href="https://dexscreener.com" target="_blank" rel="noopener noreferrer">
-                    <img src="https://cdn.prod.website-files.com/6421d264d066fd2b24b91b20/661375b92a7e161501f4b5e5_dexscreener.322a5a2d.png" alt="DexScreener Logo">
-                </a>
-                <a href="https://pump.fun" target="_blank" rel="noopener noreferrer">
-                    <img src="https://pump.fun/icon.png?c2a22dd8671140c9" alt="Pump Fun Logo">
-                </a>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        function createSparkle(e) {
-            const sparkle = document.createElement('div');
-            sparkle.className = 'sparkle';
-            document.body.appendChild(sparkle);
-
-            const size = Math.random() * 20 + 5;
-            sparkle.style.width = `${size}px`;
-            sparkle.style.height = `${size}px`;
-            sparkle.style.left = `${e.clientX}px`;
-            sparkle.style.top = `${e.clientY}px`;
-
-            sparkle.style.animation = `sparkle ${Math.random() * 1 + 0.5}s linear`;
-
-            sparkle.addEventListener('animationend', () => {
-                sparkle.remove();
-            });
-        }
-
-        document.addEventListener('mousemove', createSparkle);
-    </script>
 </body>
 </html>
