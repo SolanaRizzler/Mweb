@@ -3,214 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Purrari - The Ultimate Cat Ferrari</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Heisenberg Dog - Breaking Bark</title>
     <style>
-        :root {
-            --color-primary: #ff2800; /* Ferrari Red */
-            --color-secondary: #ffffff; /* White */
-            --color-accent: #000000; /* Black */
-            --color-background: #f5f5f5; /* Light Grey */
-            --color-gold: #d4af37; /* Gold */
-        }
-
-        body, html {
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #1a1a1a;
+            color: #e6e6e6;
             margin: 0;
             padding: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: var(--color-background);
-            color: var(--color-accent);
-            overflow-x: hidden;
         }
-
         header {
-            background-color: var(--color-primary);
-            color: var(--color-secondary);
-            padding: 20px 0;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-            font-family: 'Playfair Display', serif;
-            letter-spacing: 2px;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: var(--color-accent);
-            padding: 10px 0;
-        }
-
-        nav a {
-            color: var(--color-secondary);
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: bold;
-            transition: color 0.3s;
-            font-family: 'Playfair Display', serif;
-        }
-
-        nav a:hover {
-            color: var(--color-gold);
-        }
-
-        .hero {
-            background-color: var(--color-primary);
-            color: var(--color-secondary);
-            text-align: center;
-            padding: 100px 20px;
-            position: relative;
-        }
-
-        .hero img {
-            width: 60%;
-            max-width: 600px;
-            height: auto;
-            border: 5px solid var(--color-secondary);
-            border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .hero img:hover {
-            transform: scale(1.05);
-        }
-
-        .hero h1 {
-            font-size: 64px;
-            margin: 20px 0;
-            font-family: 'Playfair Display', serif;
-            letter-spacing: 3px;
-        }
-
-        .hero p {
-            font-size: 24px;
-            margin: 20px 0;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .cta-button {
-            background-color: var(--color-gold);
-            color: var(--color-primary);
-            padding: 15px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 20px;
-            transition: all 0.3s ease;
-            font-size: 18px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .cta-button:hover {
-            background-color: var(--color-accent);
-            color: var(--color-secondary);
-            transform: scale(1.05);
-        }
-
-        .content {
-            padding: 60px 20px;
+            background-color: #0d3d0d;
+            padding: 20px;
             text-align: center;
         }
-
-        .content h2 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            font-family: 'Playfair Display', serif;
-            color: var(--color-primary);
+        h1 {
+            color: #ccff00;
+            font-size: 2.5em;
+            margin: 0;
         }
-
-        .content p {
-            font-size: 20px;
-            margin-bottom: 20px;
-            font-family: 'Playfair Display', serif;
-        }
-
-        footer {
-            background-color: var(--color-accent);
-            color: var(--color-secondary);
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-        }
-
-        .social-icons {
-            margin-top: 20px;
+        main {
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 40px;
         }
-
-        .social-icons a {
-            margin: 0 15px;
-            transition: transform 0.3s ease;
+        .content {
+            max-width: 800px;
+            text-align: center;
         }
-
-        .social-icons a:hover {
-            transform: scale(1.1);
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 5px solid #ccff00;
         }
-
-        .social-icons img {
+        footer {
+            background-color: #0d3d0d;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.8em;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        .social-links {
+            margin-top: 15px;
+        }
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .social-links img {
             width: 30px;
             height: 30px;
-            object-fit: contain;
-        }
-
-        .social-icons .invert {
-            filter: invert(1);
-        }
-
-        .social-icons .small {
-            width: 25px; /* Slightly smaller size for the X logo */
-            height: 25px;
+            border: none;
         }
     </style>
 </head>
 <body>
     <header>
-        Purrari - The Ultimate Cat Ferrari
+        <h1>Heisenberg Dog: Breaking Bark</h1>
     </header>
-
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#features">Features</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="hero" id="home">
-        <img src="https://i.postimg.cc/wB74wwKL/Catferrari.png" alt="Purrari Car">
-        <h1>Purrarri</h1>
-        <p>Experience the Purr of Luxury and Speed</p>
-        <a href="#features" class="cta-button">Discover More</a>
-    </div>
-
-    <div class="content" id="about">
-        <h2>About Purrari</h2>
-        <p>Purrari is the ultimate blend of luxury, speed, and feline elegance. Designed for those who appreciate the finer things in life, Purrari offers an unparalleled driving experience.</p>
-    </div>
-
-    <div class="content" id="features">
-        <h2>Features</h2>
-        <p>From its sleek design to its powerful engine, Purrari is packed with features that make it the perfect car for any cat enthusiast. Enjoy state-of-the-art technology, premium materials, and a driving experience like no other.</p>
-    </div>
-
+    
+    <main>
+        <div class="content">
+            <img src="https://i.postimg.cc/Qt6d3K8B/Heisendog.png" alt="Heisenberg Dog">
+            <h2>The One Who Barks</h2>
+            <p>Meet the canine kingpin of the underground treat trade. With a nose for chemistry and a tail for trouble, Heisenberg Dog is cooking up something special in the backyard lab.</p>
+        </div>
+    </main>
+    
     <footer>
-        <p>&copy; 2024 Purrari. All rights reserved.</p>
-        <div class="social-icons">
-            <a href="https://x.com/PurrariSolana" target="_blank" rel="noopener noreferrer">
-                <img src="https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png" alt="Twitter X Logo" class="invert small">
-            </a>
-            <a href="https://t.me/PurrariSolana" target="_blank" rel="noopener noreferrer">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/182px-Telegram_2019_Logo.svg.png" alt="Telegram Logo">
-            </a>
-            <a href="https://dexscreener.com" target="_blank" rel="noopener noreferrer">
-                <img src="https://cdn.prod.website-files.com/6421d264d066fd2b24b91b20/661375b92a7e161501f4b5e5_dexscreener.322a5a2d.png" alt="DexScreener Logo" class="invert">
-            </a>
-            <a href="https://pump.fun" target="_blank" rel="noopener noreferrer">
-                <img src="https://pump.fun/icon.png?c2a22dd8671140c9" alt="Pump Fun Logo">
-            </a>
+        <p>About Us: We're not in the puppy business, we're in the empire business.</p>
+        <p>Disclaimer: This is a parody website. No actual dogs were involved in any illegal activities.</p>
+        <div class="social-links">
+            <a href="https://x.com/HeisendogOnSol" target="_blank"><img src="https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png" alt="X (Twitter)"></a>
+            <a href="https://t.me/Heisendogonsol" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/182px-Telegram_2019_Logo.svg.png" alt="Telegram"></a>
+            <a href="#" target="_blank"><img src="https://cdn.prod.website-files.com/6421d264d066fd2b24b91b20/661375b92a7e161501f4b5e5_dexscreener.322a5a2d.png" alt="DexScreener"></a>
+            <a href="#" target="_blank"><img src="https://pump.fun/icon.png?c2a22dd8671140c9" alt="Pump"></a>
         </div>
     </footer>
 </body>
