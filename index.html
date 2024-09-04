@@ -3,146 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liberty Dog - American Heroism</title>
-    <!-- Add Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Halo Dog</title>
     <style>
-        body {
-            font-family: 'Trajan Pro', 'Times New Roman', serif;
-            background-color: #f9f9f9;
-            color: #333;
+        body, html {
             margin: 0;
             padding: 0;
-            line-height: 1.6;
-        }
-        header {
-            background-color: #002868;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
-            text-shadow: 2px 2px #bf0a30;
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+            background-color: #000000;
         }
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
-        .hero-image {
-            width: 100%;
-            max-height: 500px;
-            object-fit: cover;
-            border: 10px solid #bf0a30;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        .header, .footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px 40px;
+            z-index: 10;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 1.1rem;
+        }
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            position: relative;
+            background-image: url('https://i.postimg.cc/7L5Nr0Mc/n7k1hk5ov9m71-ezgif-com-webp-to-jpg-converter.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
         .content {
-            background-color: white;
-            padding: 40px;
-            border: 2px solid #002868;
-            margin-top: 40px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 40px;
+            background: linear-gradient(to right, 
+                rgba(0, 0, 0, 0.6) 0%, 
+                rgba(0, 0, 0, 0.4) 60%, 
+                rgba(0, 0, 0, 0.1) 100%
+            );
+        }
+        .image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+            text-transform: uppercase;
+            max-width: 600px;
+            line-height: 1.2;
+        }
+        .subtitle {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            max-width: 500px;
+        }
+        .cta-buttons {
+            display: flex;
+            margin-top: 30px;
         }
         .cta-button {
-            background-color: #bf0a30;
-            color: white;
-            padding: 12px 24px;
-            border: none;
+            padding: 15px 30px;
+            margin-right: 20px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             border-radius: 5px;
-            font-size: 1.2em;
-            cursor: pointer;
             transition: background-color 0.3s ease;
-            display: inline-block;
-            margin-top: 20px;
         }
-        .cta-button:hover {
-            background-color: #8b0000;
+        .cta-primary {
+            background-color: #007bff;
+            color: #ffffff;
         }
-        .stars-stripes {
-            background: linear-gradient(
-                to bottom,
-                #bf0a30 0%,
-                #bf0a30 20%,
-                white 20%,
-                white 40%,
-                #bf0a30 40%,
-                #bf0a30 60%,
-                white 60%,
-                white 80%,
-                #bf0a30 80%,
-                #bf0a30 100%
-            );
-            padding: 40px;
-            margin-top: 40px;
+        .cta-secondary {
+            background-color: transparent;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+        }
+        .footer {
             text-align: center;
+            font-size: 0.9rem;
+            padding: 20px 40px;
         }
-        footer {
-            background-color: #002868;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-        }
+
         .social-links {
-            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;
         }
+
         .social-links a {
-            display: inline-block;
-            margin: 0 15px;
-            transition: transform 0.3s ease;
-        }
-        .social-links a:hover {
-            transform: scale(1.1);
-        }
-        .social-links img {
+            margin: 0 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
             width: 40px;
             height: 40px;
-            object-fit: contain;
-            vertical-align: middle;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .social-links img {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.1);
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        .social-links a[href*="twitter.com"] img,
+        .social-links a[href*="dexscreener.com"] img {
+            filter: invert(1);
+        }
+
+        .about-us {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            max-width: 250px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            padding: 15px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            transition: opacity 0.3s ease;
+            opacity: 0.7;
+        }
+
+        .about-us:hover {
+            opacity: 1;
+        }
+
+        .about-us h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Liberty Dog</h1>
-        <p>Celebrating American Heroism</p>
-    </header>
     <div class="container">
-        <img src="https://i.postimg.cc/FFCSV2Vb/27f4ffcbc572b0972d143b243f1c2c4a.png" alt="Liberty Dog" class="hero-image">
-        <div class="content">
-            <h2>Our Mission</h2>
-            <p>Liberty Dog stands for the values that make America great: freedom, bravery, and unwavering patriotism.</p>
-            <a href="#" class="cta-button">Join the Cause</a>
-        </div>
-        <div class="content">
-            <h2>About Us</h2>
-            <p>At Liberty Dog, we are dedicated to preserving and promoting the ideals of American freedom. Our nation was founded on the principles of liberty, justice, and equality for all. We believe that these values are not just words on paper, but living ideals that must be upheld and defended by each generation.</p>
-            <p>American freedom is the cornerstone of our democracy. It empowers individuals to pursue their dreams, express their beliefs, and contribute to the diverse tapestry of our great nation. From the freedom of speech to the right to bear arms, from religious liberty to the pursuit of happiness, we celebrate and protect the freedoms that make America exceptional.</p>
-            <p>Join us in our mission to educate, inspire, and unite Americans in the spirit of liberty. Together, we can ensure that the flame of freedom burns brightly for generations to come.</p>
-        </div>
-        <div class="stars-stripes">
-            <h2 style="color: white;">Proud to be American</h2>
-        </div>
+        <header class="header">
+            <div class="logo">Halo Dog</div>
+            <nav class="nav">
+                <a href="#">Home</a>
+                <a href="#">Game</a>
+                <a href="#">Community</a>
+                <a href="#">Esports</a>
+            </nav>
+        </header>
+        <main class="main-content">
+            <div class="content">
+                <h1>Become a Hero</h1>
+                <p class="subtitle">Enter the world of Halo Infinite and experience the next chapter of the Master Chief's journey.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="cta-button cta-primary">Play Free Now</a>
+                    <a href="#" class="cta-button cta-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="https://i.postimg.cc/pXdRvL48/Halo-dog.png" alt="Halo Dog">
+            </div>
+            <div class="about-us">
+                <h3>About Us</h3>
+                <p>We are passionate creators of the Halo universe, dedicated to delivering immersive gaming experiences that push the boundaries of storytelling and multiplayer action.</p>
+            </div>
+        </main>
+        <footer class="footer">
+            <div>&copy; 2023 Halo Infinite. All rights reserved.</div>
+            <div class="social-links">
+                <a href="https://x.com/elonmusk" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png" alt="X (Twitter)">
+                </a>
+                <a href="hhttps://t.me/HaloDogOnSol" target="_blank" rel="noopener noreferrer">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/182px-Telegram_2019_Logo.svg.png" alt="Telegram">
+                </a>
+                <a href="https://dexscreener.com" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.prod.website-files.com/6421d264d066fd2b24b91b20/661375b92a7e161501f4b5e5_dexscreener.322a5a2d.png" alt="DexScreener">
+                </a>
+                <a href="https://pump.fun" target="_blank" rel="noopener noreferrer">
+                    <img src="https://pump.fun/icon.png?c2a22dd8671140c9" alt="Pump Fun">
+                </a>
+            </div>
+        </footer>
     </div>
-    <footer>
-        <p>&copy; 2023 Liberty Dog. All rights reserved.</p>
-        <p>Dedicated to preserving American freedom and values.</p>
-        <div class="social-links">
-            <a href="https://x.com/elonmusk" target="_blank" rel="noopener noreferrer">
-                <img src="https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png" alt="X (Twitter)">
-            </a>
-            <a href="https://t.me/LibertyDogOnSol" target="_blank" rel="noopener noreferrer">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/182px-Telegram_2019_Logo.svg.png" alt="Telegram">
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-                <img src="https://pump.fun/icon.png?c2a22dd8671140c9" alt="Pump Fun">
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-                <img src="https://cdn.prod.website-files.com/6421d264d066fd2b24b91b20/661375b92a7e161501f4b5e5_dexscreener.322a5a2d.png" alt="Dexscreener">
-            </a>
-        </div>
-    </footer>
 </body>
 </html>
