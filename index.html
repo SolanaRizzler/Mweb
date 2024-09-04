@@ -3,208 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal Dog - Interdimensional Canine Science</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Moana Lisa - Louvre Exhibit</title>
     <style>
-        :root {
-            --color-primary: #00A6D6;
-            --color-secondary: #FF6A00;
-            --color-background: #0E141B;
-            --color-text: #FFFFFF;
-            --color-text-muted: #A0A0A0;
-        }
-
-        body, html {
+        body {
             margin: 0;
             padding: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: var(--color-background);
-            color: var(--color-text);
-            line-height: 1.6;
+            font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+            background-color: #f0e6d2;
+            color: #333;
         }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .logo {
-            width: 120px;
-            height: auto;
-        }
-
-        nav a {
-            color: var(--color-text);
-            text-decoration: none;
-            margin-left: 30px;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: var(--color-primary);
-        }
-
-        .hero {
+        .header {
+            background-color: #8b0000;
+            color: #f0e6d2;
             text-align: center;
-            padding: 100px 0;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://pbs.twimg.com/media/Eza3O_pVcAQ9ajz?format=jpg&name=large');
-            background-size: cover;
-            background-position: center;
-        }
-
-        h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero p {
-            font-size: 24px;
-            color: var(--color-text-muted);
-            max-width: 600px;
-            margin: 0 auto 40px;
-        }
-
-        .content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 100px 0;
-        }
-
-        .content-text {
-            flex: 1;
-            padding-right: 50px;
-        }
-
-        .content h2 {
+            padding: 20px 0;
             font-size: 36px;
-            margin-bottom: 20px;
-            color: var(--color-primary);
+            letter-spacing: 2px;
         }
-
-        .content p {
-            margin-bottom: 30px;
-            font-size: 18px;
-        }
-
-        .content-image {
-            flex: 1;
-        }
-
-        .content-image img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: var(--color-primary);
-            color: var(--color-text);
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background-color: var(--color-secondary);
-            transform: translateY(-3px);
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: rgba(255, 255, 255, 0.05);
-            color: var(--color-text-muted);
-        }
-
-        .social-links {
+        .exhibit {
             display: flex;
             justify-content: center;
             align-items: center;
+            height: calc(100vh - 80px);
+        }
+        .painting-frame {
+            background-color: #8b4513;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+        .painting {
+            max-height: 70vh;
+            border: 10px solid #d4af37;
+        }
+        .plaque {
+            background-color: #d4af37;
+            color: #333;
+            padding: 10px 20px;
             margin-top: 20px;
+            text-align: center;
+            font-style: italic;
         }
-
-        .social-links a {
-            margin: 0 15px;
-            transition: transform 0.3s ease;
-        }
-
-        .social-links a:hover {
-            transform: translateY(-5px);
-        }
-
-        .social-links img {
-            width: 30px;
-            height: 30px;
-            object-fit: contain;
+        .artist {
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="https://i.postimg.cc/hGFWL6vz/Portal-dog.png" alt="Portal Dog Logo" class="logo">
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#test-chambers">Test Chambers</a>
-            <a href="#contact">Contact</a>
-        </nav>
+    <header class="header">
+        The Louvre Presents
     </header>
-
-    <div class="hero">
-        <div class="container">
-            <h1>Portal Dog Testing Facility</h1>
-            <p>Where canine science meets interdimensional travel</p>
-            <a href="#sign-up" class="cta-button">Become a Test Subject</a>
-        </div>
-    </div>
-
-    <div class="content">
-        <div class="container">
-            <div class="content-text">
-                <h2>Revolutionizing Canine Science</h2>
-                <p>At Portal Dog, we're pushing the boundaries of what's possible in canine research. Our state-of-the-art facility combines cutting-edge portal technology with the natural curiosity of dogs to explore new dimensions of science.</p>
-                <p>Join us in our mission to unlock the secrets of the universe, one paw at a time.</p>
-                <a href="#learn-more" class="cta-button">Learn More</a>
-            </div>
-            <div class="content-image">
-                <img src="https://i.postimg.cc/hGFWL6vz/Portal-dog.png" alt="Dog in lab coat">
+    <main class="exhibit">
+        <div class="painting-frame">
+            <img src="https://i.postimg.cc/zvjnJJ5h/Moanalisa-safe.png" alt="Moana Lisa" class="painting">
+            <div class="plaque">
+                <h2>Moana Lisa</h2>
+                <p>Oil on canvas, c. 2024</p>
+                <p class="artist">Artist: Leonardo Da Freaky</p>
             </div>
         </div>
-    </div>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Portal Dog Testing Facility. All rights reserved. No cakes were harmed in the making of this website.</p>
-            <div class="social-links">
-                <a href="https://x.com/Cobratate" target="_blank" rel="noopener noreferrer">
-                    <img src="https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png" alt="Twitter X Logo">
-                </a>
-                <a href="https://t.me/PortalDog" target="_blank" rel="noopener noreferrer">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/182px-Telegram_2019_Logo.svg.png" alt="Telegram Logo">
-                </a>
-                <a href="https://dexscreener.com" target="_blank" rel="noopener noreferrer">
-                    <img src="https://cdn.prod.website-files.com/6421d264d066fd2b24b91b20/661375b92a7e161501f4b5e5_dexscreener.322a5a2d.png" alt="DexScreener Logo">
-                </a>
-                <a href="https://pump.fun" target="_blank" rel="noopener noreferrer">
-                    <img src="https://pump.fun/icon.png?c2a22dd8671140c9" alt="Pump Fun Logo">
-                </a>
-            </div>
-        </div>
-    </footer>
+    </main>
 </body>
 </html>
