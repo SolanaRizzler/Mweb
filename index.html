@@ -3,48 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dwog - Learn Languages with a Frog</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>Twitch Dog - Streaming Platform for Dogs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --color-primary: #58CC02;
-            --color-secondary: #FFC800;
-            --color-background: #FFFFFF;
-            --color-text: #3C3C3C;
-            --color-text-light: #777777;
+            --color-primary: #9146FF;
+            --color-secondary: #0E0E10;
+            --color-text: #EFEFF1;
+            --color-text-muted: #ADADB8;
+            --color-background: #18181B;
         }
 
         body, html {
             margin: 0;
             padding: 0;
-            font-family: 'Nunito', sans-serif;
+            font-family: 'Inter', sans-serif;
             background-color: var(--color-background);
             color: var(--color-text);
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
         }
 
         header {
-            background-color: var(--color-primary);
-            padding: 15px 0;
-        }
-
-        nav {
+            background-color: var(--color-secondary);
+            padding: 10px 20px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: 900;
-            color: white;
-            text-decoration: none;
             display: flex;
             align-items: center;
         }
@@ -55,145 +41,208 @@
             margin-right: 10px;
         }
 
-        .nav-links a {
-            color: white;
+        .logo h1 {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        nav a {
+            color: var(--color-text);
             text-decoration: none;
             margin-left: 20px;
-            font-weight: 700;
+            font-weight: 600;
         }
 
-        .hero {
+        main {
+            display: flex;
+            padding: 20px;
+        }
+
+        .content {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .stream-container {
             background-color: var(--color-secondary);
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 48px;
+            aspect-ratio: 16 / 9;
             margin-bottom: 20px;
-            color: var(--color-text);
+            position: relative;
         }
 
-        .hero p {
-            font-size: 24px;
-            color: var(--color-text);
-            max-width: 600px;
-            margin: 0 auto 40px;
+        .stream-info h2 {
+            margin: 0 0 10px 0;
         }
 
-        .cta-button {
-            display: inline-block;
-            background-color: var(--color-primary);
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: 700;
-            font-size: 18px;
-            transition: background-color 0.3s ease;
+        .stream-info p {
+            color: var(--color-text-muted);
+            margin: 0;
         }
 
-        .cta-button:hover {
-            background-color: #4CAF00;
+        .sidebar {
+            width: 300px;
         }
 
-        .features {
-            padding: 80px 0;
-            text-align: center;
+        .recommended-channels h3, .categories h3 {
+            margin-top: 0;
         }
 
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            margin-top: 40px;
-        }
-
-        .feature {
-            background-color: #F7F7F7;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .feature img {
-            width: 80px;
-            height: 80px;
-            margin-bottom: 20px;
-        }
-
-        .feature h3 {
-            font-size: 24px;
+        .channel, .category {
+            display: flex;
+            align-items: center;
             margin-bottom: 10px;
+            text-decoration: none;
+            color: var(--color-text);
+            transition: background-color 0.2s ease;
+            padding: 5px;
+            border-radius: 5px;
         }
 
-        footer {
-            background-color: var(--color-text);
-            color: white;
-            text-align: center;
-            padding: 20px 0;
+        .channel:hover, .category:hover {
+            background-color: rgba(255, 255, 255, 0.1);
         }
 
-        .mascot {
-            width: 200px;
-            margin-bottom: 20px;
+        .channel img, .category img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: white;
+        }
+
+        .channel-info h4, .category-info h4 {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .channel-info p, .category-info p {
+            margin: 0;
+            color: var(--color-text-muted);
+            font-size: 14px;
+        }
+
+        .button {
+            background-color: var(--color-primary);
+            color: var(--color-text);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #772CE8;
+        }
+
+        .viewer-count {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: var(--color-text);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <nav>
-                <a href="#" class="logo">
-                    <img src="https://i.postimg.cc/fbY0vV7c/Duofwog.png" alt="Dwog Logo">
-                    Dwog
-                </a>
-                <div class="nav-links">
-                    <a href="#features">Features</a>
-                    <a href="#pricing">Pricing</a>
-                    <a href="#login">Login</a>
-                </div>
-            </nav>
+        <div class="logo">
+            <img src="https://i.postimg.cc/PxM5FZRj/Twitch-dog-no-bkg.png" alt="Twitch Dog Logo">
+            <h1>Twitch Dog</h1>
         </div>
+        <nav>
+            <a href="#">Browse</a>
+            <a href="#">Following</a>
+            <a href="#">Discover</a>
+        </nav>
     </header>
-
-    <div class="hero">
-        <div class="container">
-            <img src="https://i.postimg.cc/fbY0vV7c/Duofwog.png" alt="Dwog Mascot" class="mascot">
-            <h1>Ribbit Your Way to Fluency!</h1>
-            <p>Hop into language learning with Dwog, the friendliest frog in the pond.</p>
-            <a href="#get-started" class="cta-button">Start Croaking Free</a>
-        </div>
-    </div>
-
-    <div class="features" id="features">
-        <div class="container">
-            <h2>Why Learn with Dwog?</h2>
-            <div class="feature-grid">
-                <div class="feature">
-                    <img src="https://i.postimg.cc/fbY0vV7c/Duofwog.png" alt="Lily pad icon">
-                    <h3>Lily Pad Lessons</h3>
-                    <p>Hop from one bite-sized lesson to the next with ease.</p>
-                </div>
-                <div class="feature">
-                    <img src="https://i.postimg.cc/fbY0vV7c/Duofwog.png" alt="Fly icon">
-                    <h3>Fly Rewards</h3>
-                    <p>Catch virtual flies for completing lessons and challenges.</p>
-                </div>
-                <div class="feature">
-                    <img src="https://i.postimg.cc/fbY0vV7c/Duofwog.png" alt="Pond icon">
-                    <h3>Pond Pals</h3>
-                    <p>Join a global community of language-learning amphibians.</p>
-                </div>
+    <main>
+        <div class="content">
+            <div class="stream-container">
+                <iframe 
+                    width="100%" 
+                    height="100%" 
+                    src="https://www.youtube.com/embed/Gu66H5zmhkc?autoplay=1&controls=0&showinfo=0&rel=0&modestbranding=1" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen
+                ></iframe>
+                <div class="viewer-count" id="viewerCount">69,420 viewers</div>
+            </div>
+            <div class="stream-info">
+                <h2>Doggo's Playtime Stream</h2>
+                <p>Streamer: GoodBoy123 • Game: Fetch Simulator 2023</p>
             </div>
         </div>
-    </div>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Dwog. All rights reserved. Ribbit!</p>
-            
+        <div class="sidebar">
+            <div class="recommended-channels">
+                <h3>Recommended Channels</h3>
+                <a href="https://x.com/Cobratate" class="channel">
+                    <img src="https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png" alt="Twitter X Logo">
+                    <div class="channel-info">
+                        <h4>Twitter X</h4>
+                        <p>Social Media</p>
+                    </div>
+                </a>
+                <a href="https://t.me/TwitchDogOnSol" class="channel">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/182px-Telegram_2019_Logo.svg.png" alt="Telegram Logo">
+                    <div class="channel-info">
+                        <h4>Telegram</h4>
+                        <p>Messaging</p>
+                    </div>
+                </a>
+            </div>
+            <div class="categories">
+                <h3>Popular Categories</h3>
+                <a href="https://dexscreener.com" class="category">
+                    <img src="https://cdn.prod.website-files.com/6421d264d066fd2b24b91b20/661375b92a7e161501f4b5e5_dexscreener.322a5a2d.png" alt="DexScreener Logo">
+                    <div class="category-info">
+                        <h4>DexScreener</h4>
+                        <p>42.3K viewers</p>
+                    </div>
+                </a>
+                <a href="https://pump.fun" class="category">
+                    <img src="https://pump.fun/icon.png?c2a22dd8671140c9" alt="Pump Fun Logo">
+                    <div class="category-info">
+                        <h4>Pump Fun</h4>
+                        <p>38.7K viewers</p>
+                    </div>
+                </a>
+            </div>
+            <button class="button">Start Streaming</button>
         </div>
-    </footer>
+    </main>
+
+    <script>
+        let viewerCount = 69420;
+        let lastUpdateTime = Date.now();
+
+        function updateViewerCount() {
+            const currentTime = Date.now();
+            const timeDiff = (currentTime - lastUpdateTime) / 1000; // Time difference in seconds
+            lastUpdateTime = currentTime;
+
+            // Increase viewers by 10-30 per second
+            const increase = Math.floor(Math.random() * 21 + 10) * timeDiff;
+            viewerCount += increase;
+
+            // Add some small fluctuations
+            const fluctuation = Math.floor(Math.random() * 11) - 5; // Random number between -5 and 5
+            viewerCount += fluctuation;
+
+            // Round to nearest integer
+            viewerCount = Math.round(viewerCount);
+
+            document.getElementById('viewerCount').textContent = viewerCount.toLocaleString() + ' viewers';
+        }
+
+        // Update viewer count every 100ms for smoother animation
+        setInterval(updateViewerCount, 100);
+    </script>
 </body>
 </html>
