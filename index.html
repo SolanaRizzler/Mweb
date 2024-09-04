@@ -3,246 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twitch Dog - Streaming Platform for Dogs</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Liberty Dog - American Heroism</title>
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root {
-            --color-primary: #9146FF;
-            --color-secondary: #0E0E10;
-            --color-text: #EFEFF1;
-            --color-text-muted: #ADADB8;
-            --color-background: #18181B;
-        }
-
-        body, html {
+        body {
+            font-family: 'Trajan Pro', 'Times New Roman', serif;
+            background-color: #f9f9f9;
+            color: #333;
             margin: 0;
             padding: 0;
-            font-family: 'Inter', sans-serif;
-            background-color: var(--color-background);
-            color: var(--color-text);
+            line-height: 1.6;
         }
-
         header {
-            background-color: var(--color-secondary);
-            padding: 10px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            background-color: #002868;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
         }
-
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo img {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
-        }
-
-        .logo h1 {
-            font-size: 20px;
+        h1 {
             margin: 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px #bf0a30;
         }
-
-        nav a {
-            color: var(--color-text);
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: 600;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
         }
-
-        main {
-            display: flex;
-            padding: 20px;
-        }
-
-        .content {
-            flex: 1;
-            margin-right: 20px;
-        }
-
-        .stream-container {
-            background-color: var(--color-secondary);
-            aspect-ratio: 16 / 9;
-            margin-bottom: 20px;
-            position: relative;
-        }
-
-        .stream-info h2 {
-            margin: 0 0 10px 0;
-        }
-
-        .stream-info p {
-            color: var(--color-text-muted);
-            margin: 0;
-        }
-
-        .sidebar {
-            width: 300px;
-        }
-
-        .recommended-channels h3, .categories h3 {
-            margin-top: 0;
-        }
-
-        .channel, .category {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-            text-decoration: none;
-            color: var(--color-text);
-            transition: background-color 0.2s ease;
-            padding: 5px;
-            border-radius: 5px;
-        }
-
-        .channel:hover, .category:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .channel img, .category img {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
-            border-radius: 50%;
+        .hero-image {
+            width: 100%;
+            max-height: 500px;
             object-fit: cover;
+            border: 10px solid #bf0a30;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .content {
             background-color: white;
+            padding: 40px;
+            border: 2px solid #002868;
+            margin-top: 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
-        .channel-info h4, .category-info h4 {
-            margin: 0;
-            font-size: 16px;
-        }
-
-        .channel-info p, .category-info p {
-            margin: 0;
-            color: var(--color-text-muted);
-            font-size: 14px;
-        }
-
-        .button {
-            background-color: var(--color-primary);
-            color: var(--color-text);
+        .cta-button {
+            background-color: #bf0a30;
+            color: white;
+            padding: 12px 24px;
             border: none;
-            padding: 10px 20px;
             border-radius: 5px;
-            font-weight: 600;
+            font-size: 1.2em;
             cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+            margin-top: 20px;
         }
-
-        .button:hover {
-            background-color: #772CE8;
+        .cta-button:hover {
+            background-color: #8b0000;
         }
-
-        .viewer-count {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            background-color: rgba(0, 0, 0, 0.6);
-            color: var(--color-text);
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 14px;
-            font-weight: bold;
+        .stars-stripes {
+            background: linear-gradient(
+                to bottom,
+                #bf0a30 0%,
+                #bf0a30 20%,
+                white 20%,
+                white 40%,
+                #bf0a30 40%,
+                #bf0a30 60%,
+                white 60%,
+                white 80%,
+                #bf0a30 80%,
+                #bf0a30 100%
+            );
+            padding: 40px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        footer {
+            background-color: #002868;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-links a {
+            display: inline-block;
+            margin: 0 15px;
+            transition: transform 0.3s ease;
+        }
+        .social-links a:hover {
+            transform: scale(1.1);
+        }
+        .social-links img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            vertical-align: middle;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="https://i.postimg.cc/PxM5FZRj/Twitch-dog-no-bkg.png" alt="Twitch Dog Logo">
-            <h1>Twitch Dog</h1>
-        </div>
-        <nav>
-            <a href="#">Browse</a>
-            <a href="#">Following</a>
-            <a href="#">Discover</a>
-        </nav>
+        <h1>Liberty Dog</h1>
+        <p>Celebrating American Heroism</p>
     </header>
-    <main>
+    <div class="container">
+        <img src="https://i.postimg.cc/FFCSV2Vb/27f4ffcbc572b0972d143b243f1c2c4a.png" alt="Liberty Dog" class="hero-image">
         <div class="content">
-            <div class="stream-container">
-                <iframe 
-                    width="100%" 
-                    height="100%" 
-                    src="https://www.youtube.com/embed/Gu66H5zmhkc?autoplay=1&controls=0&showinfo=0&rel=0&modestbranding=1" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen
-                ></iframe>
-                <div class="viewer-count" id="viewerCount">69,420 viewers</div>
-            </div>
-            <div class="stream-info">
-                <h2>Doggo's Playtime Stream</h2>
-                <p>Streamer: GoodBoy123 • Game: Fetch Simulator 2023</p>
-            </div>
+            <h2>Our Mission</h2>
+            <p>Liberty Dog stands for the values that make America great: freedom, bravery, and unwavering patriotism.</p>
+            <a href="#" class="cta-button">Join the Cause</a>
         </div>
-        <div class="sidebar">
-            <div class="recommended-channels">
-                <h3>Recommended Channels</h3>
-                <a href="https://x.com/Cobratate" class="channel">
-                    <img src="https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png" alt="Twitter X Logo">
-                    <div class="channel-info">
-                        <h4>Twitter X</h4>
-                        <p>Social Media</p>
-                    </div>
-                </a>
-                <a href="https://t.me/TwitchDogOnSol" class="channel">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/182px-Telegram_2019_Logo.svg.png" alt="Telegram Logo">
-                    <div class="channel-info">
-                        <h4>Telegram</h4>
-                        <p>Messaging</p>
-                    </div>
-                </a>
-            </div>
-            <div class="categories">
-                <h3>Popular Categories</h3>
-                <a href="https://dexscreener.com" class="category">
-                    <img src="https://cdn.prod.website-files.com/6421d264d066fd2b24b91b20/661375b92a7e161501f4b5e5_dexscreener.322a5a2d.png" alt="DexScreener Logo">
-                    <div class="category-info">
-                        <h4>DexScreener</h4>
-                        <p>42.3K viewers</p>
-                    </div>
-                </a>
-                <a href="https://pump.fun" class="category">
-                    <img src="https://pump.fun/icon.png?c2a22dd8671140c9" alt="Pump Fun Logo">
-                    <div class="category-info">
-                        <h4>Pump Fun</h4>
-                        <p>38.7K viewers</p>
-                    </div>
-                </a>
-            </div>
-            <button class="button">Start Streaming</button>
+        <div class="content">
+            <h2>About Us</h2>
+            <p>At Liberty Dog, we are dedicated to preserving and promoting the ideals of American freedom. Our nation was founded on the principles of liberty, justice, and equality for all. We believe that these values are not just words on paper, but living ideals that must be upheld and defended by each generation.</p>
+            <p>American freedom is the cornerstone of our democracy. It empowers individuals to pursue their dreams, express their beliefs, and contribute to the diverse tapestry of our great nation. From the freedom of speech to the right to bear arms, from religious liberty to the pursuit of happiness, we celebrate and protect the freedoms that make America exceptional.</p>
+            <p>Join us in our mission to educate, inspire, and unite Americans in the spirit of liberty. Together, we can ensure that the flame of freedom burns brightly for generations to come.</p>
         </div>
-    </main>
-
-    <script>
-        let viewerCount = 69420;
-        let lastUpdateTime = Date.now();
-
-        function updateViewerCount() {
-            const currentTime = Date.now();
-            const timeDiff = (currentTime - lastUpdateTime) / 1000; // Time difference in seconds
-            lastUpdateTime = currentTime;
-
-            // Increase viewers by 10-30 per second
-            const increase = Math.floor(Math.random() * 21 + 10) * timeDiff;
-            viewerCount += increase;
-
-            // Add some small fluctuations
-            const fluctuation = Math.floor(Math.random() * 11) - 5; // Random number between -5 and 5
-            viewerCount += fluctuation;
-
-            // Round to nearest integer
-            viewerCount = Math.round(viewerCount);
-
-            document.getElementById('viewerCount').textContent = viewerCount.toLocaleString() + ' viewers';
-        }
-
-        // Update viewer count every 100ms for smoother animation
-        setInterval(updateViewerCount, 100);
-    </script>
+        <div class="stars-stripes">
+            <h2 style="color: white;">Proud to be American</h2>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Liberty Dog. All rights reserved.</p>
+        <p>Dedicated to preserving American freedom and values.</p>
+        <div class="social-links">
+            <a href="https://x.com/elonmusk" target="_blank" rel="noopener noreferrer">
+                <img src="https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png" alt="X (Twitter)">
+            </a>
+            <a href="https://t.me/LibertyDogOnSol" target="_blank" rel="noopener noreferrer">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/182px-Telegram_2019_Logo.svg.png" alt="Telegram">
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="https://pump.fun/icon.png?c2a22dd8671140c9" alt="Pump Fun">
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="https://cdn.prod.website-files.com/6421d264d066fd2b24b91b20/661375b92a7e161501f4b5e5_dexscreener.322a5a2d.png" alt="Dexscreener">
+            </a>
+        </div>
+    </footer>
 </body>
 </html>
