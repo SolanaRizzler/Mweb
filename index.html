@@ -3,220 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halo Dog</title>
+    <title>Portal Dog - Interdimensional Canine Science</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --color-primary: #00A6D6;
+            --color-secondary: #FF6A00;
+            --color-background: #0E141B;
+            --color-text: #FFFFFF;
+            --color-text-muted: #A0A0A0;
+        }
+
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #ffffff;
-            background-color: #000000;
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--color-background);
+            color: var(--color-text);
+            line-height: 1.6;
         }
+
         .container {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-        .header, .footer {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 20px 40px;
-            z-index: 10;
-        }
-        .header {
+
+        header {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
+
         .logo {
-            font-size: 2rem;
-            font-weight: bold;
-            text-transform: uppercase;
+            width: 120px;
+            height: auto;
         }
-        .nav a {
-            color: #ffffff;
+
+        nav a {
+            color: var(--color-text);
             text-decoration: none;
-            margin-left: 20px;
-            font-size: 1.1rem;
+            margin-left: 30px;
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
-        .main-content {
-            flex-grow: 1;
-            display: flex;
-            position: relative;
-            background-image: url('https://i.postimg.cc/7L5Nr0Mc/n7k1hk5ov9m71-ezgif-com-webp-to-jpg-converter.jpg');
+
+        nav a:hover {
+            color: var(--color-primary);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://pbs.twimg.com/media/Eza3O_pVcAQ9ajz?format=jpg&name=large');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
         }
-        .content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding-left: 40px;
-            background: linear-gradient(to right, 
-                rgba(0, 0, 0, 0.6) 0%, 
-                rgba(0, 0, 0, 0.4) 60%, 
-                rgba(0, 0, 0, 0.1) 100%
-            );
-        }
-        .image-container {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .image-container img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-        }
+
         h1 {
-            font-size: 4rem;
-            margin: 0;
-            text-transform: uppercase;
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 24px;
+            color: var(--color-text-muted);
             max-width: 600px;
-            line-height: 1.2;
+            margin: 0 auto 40px;
         }
-        .subtitle {
-            font-size: 1.5rem;
-            margin-top: 20px;
-            max-width: 500px;
-        }
-        .cta-buttons {
+
+        .content {
             display: flex;
-            margin-top: 30px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 100px 0;
         }
+
+        .content-text {
+            flex: 1;
+            padding-right: 50px;
+        }
+
+        .content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: var(--color-primary);
+        }
+
+        .content p {
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+
+        .content-image {
+            flex: 1;
+        }
+
+        .content-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
         .cta-button {
+            display: inline-block;
+            background-color: var(--color-primary);
+            color: var(--color-text);
             padding: 15px 30px;
-            margin-right: 20px;
             text-decoration: none;
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
-        .cta-primary {
-            background-color: #007bff;
-            color: #ffffff;
+
+        .cta-button:hover {
+            background-color: var(--color-secondary);
+            transform: translateY(-3px);
         }
-        .cta-secondary {
-            background-color: transparent;
-            color: #ffffff;
-            border: 2px solid #ffffff;
-        }
-        .footer {
+
+        footer {
             text-align: center;
-            font-size: 0.9rem;
-            padding: 20px 40px;
+            padding: 20px 0;
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--color-text-muted);
         }
 
         .social-links {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 15px;
+            margin-top: 20px;
         }
 
         .social-links a {
-            margin: 0 10px;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: transform 0.3s ease, background-color 0.3s ease;
-        }
-
-        .social-links img {
-            width: 24px;
-            height: 24px;
+            margin: 0 15px;
             transition: transform 0.3s ease;
         }
 
         .social-links a:hover {
-            transform: scale(1.1);
-            background-color: rgba(255, 255, 255, 1);
+            transform: translateY(-5px);
         }
 
-        .social-links a[href*="twitter.com"] img,
-        .social-links a[href*="dexscreener.com"] img {
-            filter: invert(1);
-        }
-
-        .about-us {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            max-width: 250px;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 8px;
-            padding: 15px;
-            font-size: 0.9rem;
-            line-height: 1.4;
-            transition: opacity 0.3s ease;
-            opacity: 0.7;
-        }
-
-        .about-us:hover {
-            opacity: 1;
-        }
-
-        .about-us h3 {
-            margin-top: 0;
-            margin-bottom: 10px;
-            font-size: 1.1rem;
+        .social-links img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="logo">Halo Dog</div>
-            <nav class="nav">
-                <a href="#">Home</a>
-                <a href="#">Game</a>
-                <a href="#">Community</a>
-                <a href="#">Esports</a>
-            </nav>
-        </header>
-        <main class="main-content">
-            <div class="content">
-                <h1>Become a Hero</h1>
-                <p class="subtitle">Enter the world of Halo Infinite and experience the next chapter of the Master Chief's journey.</p>
-                <div class="cta-buttons">
-                    <a href="#" class="cta-button cta-primary">Play Free Now</a>
-                    <a href="#" class="cta-button cta-secondary">Learn More</a>
-                </div>
+    <header>
+        <img src="https://i.postimg.cc/hGFWL6vz/Portal-dog.png" alt="Portal Dog Logo" class="logo">
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#test-chambers">Test Chambers</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="container">
+            <h1>Portal Dog Testing Facility</h1>
+            <p>Where canine science meets interdimensional travel</p>
+            <a href="#sign-up" class="cta-button">Become a Test Subject</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <div class="content-text">
+                <h2>Revolutionizing Canine Science</h2>
+                <p>At Portal Dog, we're pushing the boundaries of what's possible in canine research. Our state-of-the-art facility combines cutting-edge portal technology with the natural curiosity of dogs to explore new dimensions of science.</p>
+                <p>Join us in our mission to unlock the secrets of the universe, one paw at a time.</p>
+                <a href="#learn-more" class="cta-button">Learn More</a>
             </div>
-            <div class="image-container">
-                <img src="https://i.postimg.cc/pXdRvL48/Halo-dog.png" alt="Halo Dog">
+            <div class="content-image">
+                <img src="https://i.postimg.cc/hGFWL6vz/Portal-dog.png" alt="Dog in lab coat">
             </div>
-            <div class="about-us">
-                <h3>About Us</h3>
-                <p>We are passionate creators of the Halo universe, dedicated to delivering immersive gaming experiences that push the boundaries of storytelling and multiplayer action.</p>
-            </div>
-        </main>
-        <footer class="footer">
-            <div>&copy; 2023 Halo Infinite. All rights reserved.</div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Portal Dog Testing Facility. All rights reserved. No cakes were harmed in the making of this website.</p>
             <div class="social-links">
-                <a href="https://x.com/elonmusk" target="_blank" rel="noopener noreferrer">
-                    <img src="https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png" alt="X (Twitter)">
+                <a href="https://x.com/Cobratate" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png" alt="Twitter X Logo">
                 </a>
-                <a href="hhttps://t.me/HaloDogOnSol" target="_blank" rel="noopener noreferrer">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/182px-Telegram_2019_Logo.svg.png" alt="Telegram">
+                <a href="https://t.me/PortalDog" target="_blank" rel="noopener noreferrer">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/182px-Telegram_2019_Logo.svg.png" alt="Telegram Logo">
                 </a>
                 <a href="https://dexscreener.com" target="_blank" rel="noopener noreferrer">
-                    <img src="https://cdn.prod.website-files.com/6421d264d066fd2b24b91b20/661375b92a7e161501f4b5e5_dexscreener.322a5a2d.png" alt="DexScreener">
+                    <img src="https://cdn.prod.website-files.com/6421d264d066fd2b24b91b20/661375b92a7e161501f4b5e5_dexscreener.322a5a2d.png" alt="DexScreener Logo">
                 </a>
                 <a href="https://pump.fun" target="_blank" rel="noopener noreferrer">
-                    <img src="https://pump.fun/icon.png?c2a22dd8671140c9" alt="Pump Fun">
+                    <img src="https://pump.fun/icon.png?c2a22dd8671140c9" alt="Pump Fun Logo">
                 </a>
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
 </body>
 </html>
