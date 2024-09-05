@@ -3,153 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SuperDog - Superman's Canine Companion</title>
+    <title>Chrome Dog</title>
     <style>
-        body {
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            background-color: #F0F0F0;
-            color: #333;
+        body, html {
             margin: 0;
             padding: 0;
+            font-family: 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
+            background-color: #f1f3f4;
+            color: #202124;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
         }
         .container {
             max-width: 1200px;
-            margin: 0 auto;
+            width: 100%;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         header {
-            background-color: #0058B0;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            border-bottom: 5px solid #FFD700;
-            box-shadow: 0 5px 0 #D32F2F;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
         }
-        header h1 {
-            font-family: 'Bangers', cursive;
-            font-size: 3em;
+        .logo {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: normal;
             margin: 0;
-            text-shadow: 3px 3px #D32F2F;
         }
-        nav {
-            margin-top: 10px;
+        .search-bar {
+            background-color: #ffffff;
+            border-radius: 24px;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+            margin-bottom: 40px;
+            width: 80%;
+            max-width: 600px;
         }
-        nav a {
-            color: #FFD700;
-            text-decoration: none;
-            margin: 0 10px;
-            font-family: 'Bangers', cursive;
-            font-size: 1.2em;
-        }
-        footer {
-            background-color: #D32F2F;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            position: fixed;
-            bottom: 0;
+        .search-bar input {
+            border: none;
+            outline: none;
+            font-size: 16px;
             width: 100%;
-            border-top: 5px solid #FFD700;
-            box-shadow: 0 -5px 0 #0058B0;
+            margin-left: 10px;
         }
-        footer p {
-            font-family: 'Bangers', cursive;
-            font-size: 1.2em;
-            margin: 5px 0;
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            width: 100%;
+            max-width: 600px;
         }
-        .comic-box {
-            background-color: #FFD700;
-            color: #0058B0;
-            border: 4px solid #0058B0;
-            border-radius: 15px;
-            padding: 20px;
-            margin: 30px auto;
-            max-width: 80%;
-            position: relative;
-            font-family: 'Bangers', cursive;
-            font-size: 1.3em;
+        .app {
             text-align: center;
-            box-shadow: 8px 8px 0px #D32F2F;
+            cursor: pointer;
         }
-        .comic-box:before {
-            content: "";
-            position: absolute;
-            top: -20px;
-            left: 5%;
-            border-width: 0 20px 20px;
-            border-style: solid;
-            border-color: #0058B0 transparent;
-            display: block;
-            width: 0;
+        .app-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 10px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            overflow: hidden;
         }
-        .comic-box:after {
-            content: "";
-            position: absolute;
-            top: -12px;
-            left: 5.5%;
-            border-width: 0 15px 15px;
-            border-style: solid;
-            border-color: #FFD700 transparent;
-            display: block;
-            width: 0;
+        .app-icon img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
         }
-        .social-links {
-            margin-top: 15px;
+        .app-name {
+            font-size: 14px;
+            color: #5f6368;
         }
-        .social-links a {
-            display: inline-block;
-            margin: 0 10px;
-        }
-        .social-links img {
-            width: 30px;
-            height: 30px;
-            transition: transform 0.3s ease;
-        }
-        .social-links img:hover {
-            transform: scale(1.1);
+        .app a {
+            text-decoration: none;
+            color: inherit;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>SuperDog</h1>
-            <nav>
-                <a href="#home">Home</a> |
-                <a href="#about">About</a> |
-                <a href="#gallery">Gallery</a> |
-                <a href="#contact">Contact</a>
-            </nav>
+    <div class="container">
+        <header>
+            <img src="https://i.postimg.cc/15CWB9q4/Chrome-dog-1.png" alt="Chrome Dog Logo" class="logo">
+            <h1>Chrome Dog</h1>
+        </header>
+        
+        <div class="search-bar">
+            <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="#5f6368"></path>
+            </svg>
+            <input type="text" placeholder="Search the web">
         </div>
-    </header>
-
-    <main class="container">
-        <section id="home" class="main-image">
-            <img src="https://i.postimg.cc/2STVg3Xg/SuperDog.png" alt="SuperDog in action" style="display: block; margin: 0 auto; max-width: 100%;">
-        </section>
-
-        <section id="about">
-            <div class="comic-box">
-                <h2>About SuperDog</h2>
-                <p>Meet SuperDog, Superman's loyal canine companion! With powers that rival even the Man of Steel, SuperDog is always ready to save the day and fetch the occasional Kryptonian stick.</p>
+        
+        <div class="apps-grid">
+            <div class="app">
+                <a href="https://x.com/Cobratate" target="_blank">
+                    <div class="app-icon">
+                        <img src="https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png" alt="X (Twitter)">
+                    </div>
+                    <div class="app-name">X (Twitter)</div>
+                </a>
             </div>
-        </section>
-
-        <!-- Add more sections as needed -->
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>SuperDog: Saving the world, one bark at a time!</p>
-            <p>&copy; 2023 SuperDog. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://x.com/Cobratate" target="_blank"><img src="https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png" alt="X (Twitter)"></a>
-                <a href="https://t.me/SuperdogOnSol" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/182px-Telegram_2019_Logo.svg.png" alt="Telegram"></a>
-                <a href="#" target="_blank"><img src="https://cdn.prod.website-files.com/6421d264d066fd2b24b91b20/661375b92a7e161501f4b5e5_dexscreener.322a5a2d.png" alt="DexScreener"></a>
-                <a href="#" target="_blank"><img src="https://pump.fun/icon.png?c2a22dd8671140c9" alt="Pump"></a>
+            <div class="app">
+                <a href="https://t.me/ChromeDogSolana" target="_blank">
+                    <div class="app-icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/182px-Telegram_2019_Logo.svg.png" alt="Telegram">
+                    </div>
+                    <div class="app-name">Telegram</div>
+                </a>
+            </div>
+            <div class="app">
+                <a href="https://dexscreener.com" target="_blank">
+                    <div class="app-icon">
+                        <img src="https://cdn.prod.website-files.com/6421d264d066fd2b24b91b20/661375b92a7e161501f4b5e5_dexscreener.322a5a2d.png" alt="DexScreener">
+                    </div>
+                    <div class="app-name">DexScreener</div>
+                </a>
+            </div>
+            <div class="app">
+                <a href="https://pump.fun" target="_blank">
+                    <div class="app-icon">
+                        <img src="https://pump.fun/icon.png?c2a22dd8671140c9" alt="Pump.fun">
+                    </div>
+                    <div class="app-name">Pump.fun</div>
+                </a>
             </div>
         </div>
-    </footer>
+    </div>
 </body>
 </html>
