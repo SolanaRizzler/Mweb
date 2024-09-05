@@ -3,217 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doxer - The Undisputed Champion</title>
+    <title>SuperDog - Superman's Canine Companion</title>
     <style>
-        body, html {
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #F0F0F0;
+            color: #333;
             margin: 0;
             padding: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #1a1a1a;
-            color: #ffffff;
-        }
-        header {
-            background-color: #d4af37;
-            padding: 20px 0;
         }
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 20px;
+        }
+        header {
+            background-color: #0058B0;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 5px solid #FFD700;
+            box-shadow: 0 5px 0 #D32F2F;
+        }
+        header h1 {
+            font-family: 'Bangers', cursive;
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 3px 3px #D32F2F;
         }
         nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            margin-top: 10px;
         }
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #1a1a1a;
-        }
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-        .nav-links a {
-            color: #1a1a1a;
+        nav a {
+            color: #FFD700;
             text-decoration: none;
-            font-weight: bold;
-        }
-        .hero {
-            background: url('https://example.com/boxing-ring.jpg') no-repeat center center;
-            background-size: cover;
-            height: 600px;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.5);
-        }
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-        .hero h1 {
-            font-size: 4em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-        .hero p {
+            margin: 0 10px;
+            font-family: 'Bangers', cursive;
             font-size: 1.2em;
-            margin-bottom: 30px;
-        }
-        .cta-button {
-            display: inline-block;
-            background-color: #d4af37;
-            color: #1a1a1a;
-            padding: 12px 24px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-        }
-        .boxer-image {
-            text-align: center;
-            margin: 50px 0;
-        }
-        .boxer-image img {
-            max-width: 100%;
-            height: auto;
-            border: 5px solid #d4af37;
-            border-radius: 10px;
-        }
-        .stats {
-            background-color: #2a2a2a;
-            padding: 50px 0;
-        }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            text-align: center;
-        }
-        .stat-item h3 {
-            font-size: 2.5em;
-            color: #d4af37;
-            margin-bottom: 10px;
-        }
-        .upcoming-fight {
-            padding: 50px 0;
-            text-align: center;
-        }
-        .upcoming-fight h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #d4af37;
         }
         footer {
-            background-color: #d4af37;
-            color: #1a1a1a;
+            background-color: #D32F2F;
+            color: white;
             text-align: center;
             padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            border-top: 5px solid #FFD700;
+            box-shadow: 0 -5px 0 #0058B0;
+        }
+        footer p {
+            font-family: 'Bangers', cursive;
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+        .comic-box {
+            background-color: #FFD700;
+            color: #0058B0;
+            border: 4px solid #0058B0;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 80%;
+            position: relative;
+            font-family: 'Bangers', cursive;
+            font-size: 1.3em;
+            text-align: center;
+            box-shadow: 8px 8px 0px #D32F2F;
+        }
+        .comic-box:before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: 5%;
+            border-width: 0 20px 20px;
+            border-style: solid;
+            border-color: #0058B0 transparent;
+            display: block;
+            width: 0;
+        }
+        .comic-box:after {
+            content: "";
+            position: absolute;
+            top: -12px;
+            left: 5.5%;
+            border-width: 0 15px 15px;
+            border-style: solid;
+            border-color: #FFD700 transparent;
+            display: block;
+            width: 0;
         }
         .social-links {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
+            margin-top: 15px;
         }
         .social-links a {
+            display: inline-block;
             margin: 0 10px;
         }
         .social-links img {
             width: 30px;
             height: 30px;
-            object-fit: contain;
             transition: transform 0.3s ease;
         }
         .social-links img:hover {
             transform: scale(1.1);
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container">
+            <h1>SuperDog</h1>
             <nav>
-                <div class="logo">DOXER</div>
-                <div class="nav-links">
-                    <a href="#about">About</a>
-                    <a href="#stats">Stats</a>
-                    <a href="#fights">Fights</a>
-                    <a href="#contact">Contact</a>
-                </div>
+                <a href="#home">Home</a> |
+                <a href="#about">About</a> |
+                <a href="#gallery">Gallery</a> |
+                <a href="#contact">Contact</a>
             </nav>
         </div>
     </header>
-    <main>
-        <section class="hero">
-            <div class="container hero-content">
-                <h1>Doxer: The Undisputed Champion</h1>
-                <p>Witness the power, speed, and determination of the world's greatest boxer.</p>
-                <a href="#upcoming" class="cta-button">Next Fight</a>
+
+    <main class="container">
+        <section id="home" class="main-image">
+            <img src="https://i.postimg.cc/2STVg3Xg/SuperDog.png" alt="SuperDog in action" style="display: block; margin: 0 auto; max-width: 100%;">
+        </section>
+
+        <section id="about">
+            <div class="comic-box">
+                <h2>About SuperDog</h2>
+                <p>Meet SuperDog, Superman's loyal canine companion! With powers that rival even the Man of Steel, SuperDog is always ready to save the day and fetch the occasional Kryptonian stick.</p>
             </div>
         </section>
-        <section class="boxer-image">
-            <div class="container">
-                <img src="https://i.postimg.cc/W3QrX1hq/Doxer.png" alt="Doxer - The Champion">
-            </div>
-        </section>
-        <section id="stats" class="stats">
-            <div class="container">
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <h3>30</h3>
-                        <p>Wins</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>0</h3>
-                        <p>Losses</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>27</h3>
-                        <p>Knockouts</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>5</h3>
-                        <p>World Titles</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="upcoming" class="upcoming-fight">
-            <div class="container">
-                <h2>Upcoming Fight</h2>
-                <p>Doxer vs. The Challenger</p>
-                <p>Date: December 15, 2024</p>
-                <p>Venue: MGM Grand, Las Vegas</p>
-                <a href="#" class="cta-button">Get Tickets</a>
-            </div>
-        </section>
+
+        <!-- Add more sections as needed -->
     </main>
+
     <footer>
         <div class="container">
-            <p>&copy; 2024 Doxer - The Undisputed Champion. All rights reserved.</p>
+            <p>SuperDog: Saving the world, one bark at a time!</p>
+            <p>&copy; 2023 SuperDog. All rights reserved.</p>
             <div class="social-links">
-                <a href="https://x.com/Cobratate" target="_blank">
-                    <img src="https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png" alt="Twitter X">
-                </a>
-                <a href="https://t.me/DoxerOnSol" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/182px-Telegram_2019_Logo.svg.png" alt="Telegram">
-                </a>
-                <a href="https://dexscreener.com" target="_blank">
-                    <img src="https://cdn.prod.website-files.com/6421d264d066fd2b24b91b20/661375b92a7e161501f4b5e5_dexscreener.322a5a2d.png" alt="DexScreener">
-                </a>
-                <a href="https://pump.fun" target="_blank">
-                    <img src="https://pump.fun/icon.png?c2a22dd8671140c9" alt="Pump Fun">
-                </a>
+                <a href="https://x.com/Cobratate" target="_blank"><img src="https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png" alt="X (Twitter)"></a>
+                <a href="https://t.me/SuperdogOnSol" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/182px-Telegram_2019_Logo.svg.png" alt="Telegram"></a>
+                <a href="#" target="_blank"><img src="https://cdn.prod.website-files.com/6421d264d066fd2b24b91b20/661375b92a7e161501f4b5e5_dexscreener.322a5a2d.png" alt="DexScreener"></a>
+                <a href="#" target="_blank"><img src="https://pump.fun/icon.png?c2a22dd8671140c9" alt="Pump"></a>
             </div>
         </div>
     </footer>
