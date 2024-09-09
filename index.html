@@ -3,167 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Licence Plate</title>
+    <title>Chrome Dog</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        body, html {
             margin: 0;
             padding: 0;
+            font-family: 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
+            background-color: #f1f3f4;
+            color: #202124;
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
-            background-color: #f0f0f0;
-        }
-        .header {
-            background-color: #003366;
-            color: white;
-            padding: 20px 0;
-        }
-        .header-content {
-            display: flex;
-            justify-content: space-between;
             align-items: center;
+            min-height: 100vh;
+        }
+        .container {
             max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
         }
         .logo {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+        h1 {
             font-size: 24px;
-            font-weight: bold;
+            font-weight: normal;
+            margin: 0;
         }
         .search-bar {
-            padding: 5px;
-            border-radius: 5px;
-            border: none;
-        }
-        .main-content {
-            flex: 1;
+            background-color: #ffffff;
+            border-radius: 24px;
+            padding: 12px 20px;
             display: flex;
-            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            padding: 40px 20px;
-            max-width: 800px;
-            margin: 0 auto;
+            box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+            margin-bottom: 40px;
+            width: 80%;
+            max-width: 600px;
         }
-        .licence-plate-img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 30px;
-        }
-        .licence-plate-generator {
-            background-color: #e6f2ff;
-            border-radius: 5px;
-            padding: 20px;
-            text-align: center;
-            max-width: 400px;
-            width: 100%;
-            margin-bottom: 30px;
-        }
-        .licence-plate {
-            font-size: 36px;
-            font-weight: bold;
-            color: #003366;
-            margin: 20px 0;
-        }
-        .button {
-            background-color: #003366;
-            color: white;
+        .search-bar input {
             border: none;
-            padding: 10px 20px;
+            outline: none;
             font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
+            width: 100%;
+            margin-left: 10px;
         }
-        .about-section {
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            width: 100%;
+            max-width: 600px;
+        }
+        .app {
             text-align: center;
-            margin-bottom: 30px;
+            cursor: pointer;
         }
-        .footer {
-            background-color: #003366;
-            color: white;
-            padding: 20px 0;
-            margin-top: auto;
-        }
-        .footer-content {
+        .app-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #ffffff;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+            margin: 0 auto 10px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            overflow: hidden;
         }
-        .footer-links a {
-            color: white;
+        .app-icon img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+        }
+        .app-name {
+            font-size: 14px;
+            color: #5f6368;
+        }
+        .app a {
             text-decoration: none;
-            margin-right: 20px;
-        }
-        .social-icons {
-            display: flex;
-            gap: 15px;
-        }
-        .social-icons img {
-            width: 24px;
-            height: 24px;
+            color: inherit;
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="header-content">
-            <div class="logo">Licence Plate</div>
-            <input type="text" class="search-bar" placeholder="Search...">
+    <div class="container">
+        <header>
+            <img src="https://i.postimg.cc/cCBn4pSk/Chrome-cat.png" alt="Chrome Dog Logo" class="logo">
+            <h1>Chrome Dog</h1>
+        </header>
+        
+        <div class="search-bar">
+            <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="#5f6368"></path>
+            </svg>
+            <input type="text" placeholder="Search the web">
         </div>
-    </header>
-
-    <main class="main-content">
-        <img src="https://i.postimg.cc/DzKvBGhq/Licence-Plate.png" alt="Licence Plate" class="licence-plate-img">
-        <div class="licence-plate-generator">
-            <h2>License Plate Generator</h2>
-            <div id="licencePlate" class="licence-plate">ABC 123</div>
-            <button class="button" onclick="generatePlate()">Generate New Plate</button>
-        </div>
-        <div class="about-section">
-            <h2>About Our License on a Plate</h2>
-            <p>Ever wondered what would happen if your driver's license decided to cosplay as a license plate? Well, wonder no more! Our "License on a Plate" is the perfect blend of identity crisis and vehicular confusion. It's not just a license, it's not just a plate - it's a conversation starter that'll have the traffic cops scratching their heads!</p>
-            <p>Remember, if you're ever pulled over, just point to this and say, "Officer, I swear I'm legal... somewhere between my wallet and my bumper!" Disclaimer: May not actually be valid for driving. Or identifying yourself. Or anything really. But it sure is fun!</p>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Accessibility</a>
+        
+        <div class="apps-grid">
+            <div class="app">
+                <a href="https://x.com/Cobratate" target="_blank">
+                    <div class="app-icon">
+                        <img src="https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png" alt="X (Twitter)">
+                    </div>
+                    <div class="app-name">X (Twitter)</div>
+                </a>
             </div>
-            <div class="social-icons">
-                <a href="https://x.com/Cobratate" target="_blank"><img src="https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png" alt="Twitter"></a>
-                <a href="https://t.me/LicencePlateOnSOl" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/182px-Telegram_2019_Logo.svg.png" alt="Telegram"></a>
-                <a href="https://dexscreener.com" target="_blank"><img src="https://cdn.prod.website-files.com/6421d264d066fd2b24b91b20/661375b92a7e161501f4b5e5_dexscreener.322a5a2d.png" alt="DexScreener"></a>
-                <a href="https://pump.fun" target="_blank"><img src="https://pump.fun/icon.png?c2a22dd8671140c9" alt="Pump Fun"></a>
+            <div class="app">
+                <a href="https://t.me/ChromeCatOnSol" target="_blank">
+                    <div class="app-icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/182px-Telegram_2019_Logo.svg.png" alt="Telegram">
+                    </div>
+                    <div class="app-name">Telegram</div>
+                </a>
+            </div>
+            <div class="app">
+                <a href="https://dexscreener.com" target="_blank">
+                    <div class="app-icon">
+                        <img src="https://cdn.prod.website-files.com/6421d264d066fd2b24b91b20/661375b92a7e161501f4b5e5_dexscreener.322a5a2d.png" alt="DexScreener">
+                    </div>
+                    <div class="app-name">DexScreener</div>
+                </a>
+            </div>
+            <div class="app">
+                <a href="https://pump.fun" target="_blank">
+                    <div class="app-icon">
+                        <img src="https://pump.fun/icon.png?c2a22dd8671140c9" alt="Pump.fun">
+                    </div>
+                    <div class="app-name">Pump.fun</div>
+                </a>
             </div>
         </div>
-    </footer>
-
-    <script>
-        function generatePlate() {
-            const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-            const numbers = '0123456789';
-            let newPlate = '';
-
-            for (let i = 0; i < 3; i++) {
-                newPlate += letters.charAt(Math.floor(Math.random() * letters.length));
-            }
-
-            newPlate += ' ';
-
-            for (let i = 0; i < 3; i++) {
-                newPlate += numbers.charAt(Math.floor(Math.random() * numbers.length));
-            }
-
-            document.getElementById('licencePlate').textContent = newPlate;
-        }
-    </script>
+    </div>
 </body>
 </html>
