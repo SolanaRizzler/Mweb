@@ -3,300 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyberdog 2077 - The Future of Crypto</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Moana Lisa - Louvre Exhibit</title>
     <style>
-        :root {
-            --color-primary: #00ffff; /* Cyan */
-            --color-secondary: #ff00ff; /* Magenta */
-            --color-accent: #ffff00; /* Yellow */
-            --color-background: #0a0a0a; /* Dark background */
-            --color-text: #ffffff; /* White text */
-        }
-
-        body, html {
+        body {
             margin: 0;
             padding: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: var(--color-background);
-            color: var(--color-text);
-            overflow-x: hidden;
+            font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+            background-color: #f0e6d2;
+            color: #333;
         }
-
-        header {
-            background-color: rgba(0, 0, 0, 0.8);
-            color: var(--color-primary);
-            padding: 20px 0;
+        .header {
+            background-color: #8b0000;
+            color: #f0e6d2;
             text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-            font-family: 'Orbitron', sans-serif;
+            padding: 20px 0;
+            font-size: 36px;
             letter-spacing: 2px;
-            text-transform: uppercase;
-            position: relative;
-            overflow: hidden;
         }
-
-        header::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background-color: var(--color-primary);
-            box-shadow: 
-                0 0 5px var(--color-primary),
-                0 0 10px var(--color-primary),
-                0 0 15px var(--color-primary),
-                0 0 20px var(--color-primary);
-            animation: glow 1.5s ease-in-out infinite alternate;
-        }
-
-        nav {
+        .exhibit {
             display: flex;
             justify-content: center;
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 10px 0;
-        }
-
-        nav a {
-            color: var(--color-text);
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: bold;
-            transition: color 0.3s;
-            font-family: 'Orbitron', sans-serif;
-            text-transform: uppercase;
-        }
-
-        nav a:hover {
-            color: var(--color-secondary);
-        }
-
-        .hero {
-            background-image: url('https://wallpapers.com/images/high/cyberpunk-night-city-eb5z7c9pbcpo3g9d.webp');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
+            height: calc(100vh - 80px);
         }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
+        .painting-frame {
+            background-color: #8b4513;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
         }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .painting {
+            max-height: 70vh;
+            border: 10px solid #d4af37;
         }
-
-        .hero img {
-            width: 300px;
-            height: auto;
-            margin-bottom: 30px;
-            filter: drop-shadow(0 0 10px var(--color-primary));
-        }
-
-        .hero h1 {
-            font-size: 64px;
-            margin: 20px 0;
-            font-family: 'Orbitron', sans-serif;
-            letter-spacing: 3px;
-            color: var(--color-primary);
-            text-shadow: 
-                0 0 5px var(--color-primary),
-                0 0 10px var(--color-primary),
-                0 0 15px var(--color-primary),
-                0 0 20px var(--color-primary);
-            animation: textGlow 1.5s ease-in-out infinite alternate;
-        }
-
-        .hero p {
-            font-size: 24px;
-            margin: 20px 0;
-            font-family: 'Orbitron', sans-serif;
-            color: var(--color-accent);
-        }
-
-        .cta-button {
-            background-color: var(--color-secondary);
-            color: var(--color-text);
-            padding: 15px 30px;
-            border: none;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
+        .plaque {
+            background-color: #d4af37;
+            color: #333;
+            padding: 10px 20px;
             margin-top: 20px;
-            transition: all 0.3s ease;
-            font-size: 18px;
-            font-family: 'Orbitron', sans-serif;
-            text-transform: uppercase;
-            clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
-        }
-
-        .cta-button:hover {
-            background-color: var(--color-primary);
-            color: var(--color-background);
-            transform: scale(1.05);
-        }
-
-        .content {
-            padding: 60px 20px;
             text-align: center;
+            font-style: italic;
         }
-
-        .content h2 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            font-family: 'Orbitron', sans-serif;
-            color: var(--color-secondary);
-            text-transform: uppercase;
-        }
-
-        .content p {
-            font-size: 20px;
-            margin-bottom: 20px;
-            font-family: 'Roboto', sans-serif;
-            color: var(--color-text);
-        }
-
-        footer {
-            background-color: rgba(0, 0, 0, 0.8);
-            color: var(--color-text);
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background-color: var(--color-secondary);
-            box-shadow: 
-                0 0 5px var(--color-secondary),
-                0 0 10px var(--color-secondary),
-                0 0 15px var(--color-secondary),
-                0 0 20px var(--color-secondary);
-            animation: glow 1.5s ease-in-out infinite alternate;
-        }
-
-        .social-icons {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .social-icons a {
-            margin: 0 15px;
-            transition: transform 0.3s ease;
-        }
-
-        .social-icons a:hover {
-            transform: scale(1.1);
-        }
-
-        .social-icons img {
-            width: 30px;
-            height: 30px;
-            object-fit: contain;
-            filter: invert(1) hue-rotate(180deg);
-        }
-
-        @keyframes glow {
-            from {
-                opacity: 0.5;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes textGlow {
-            from {
-                text-shadow: 
-                    0 0 5px var(--color-primary),
-                    0 0 10px var(--color-primary),
-                    0 0 15px var(--color-primary),
-                    0 0 20px var(--color-primary);
-            }
-            to {
-                text-shadow: 
-                    0 0 10px var(--color-primary),
-                    0 0 20px var(--color-primary),
-                    0 0 30px var(--color-primary),
-                    0 0 40px var(--color-primary);
-            }
+        .artist {
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <header>
-        Cyberdog 2077 - The Future of Crypto
+    <header class="header">
+        The Louvre Presents
     </header>
-
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#features">Features</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="hero" id="home">
-        <div class="hero-content">
-            <img src="https://i.postimg.cc/4yS76DMH/cyber-dog.png" alt="Cyberdog 2077 Logo">
-            <h1>Cyberdog 2077</h1>
-            <p>The Future of Crypto is Here</p>
-            <a href="#features" class="cta-button">Explore</a>
+    <main class="exhibit">
+        <div class="painting-frame">
+            <img src="https://i.postimg.cc/zvjnJJ5h/Moanalisa-safe.png" alt="Moana Lisa" class="painting">
+            <div class="plaque">
+                <h2>Moana Lisa</h2>
+                <p>Oil on canvas, c. 2024</p>
+                <p class="artist">Artist: Leonardo Da Freaky</p>
+            </div>
         </div>
-    </div>
-
-    <div class="content" id="about">
-        <h2>About Cyberdog 2077</h2>
-        <p>Cyberdog 2077 is a revolutionary crypto project that combines cutting-edge blockchain technology with the aesthetics of a dystopian future. Our mission is to create a decentralized ecosystem that empowers users in the digital age.</p>
-    </div>
-
-    <div class="content" id="features">
-        <h2>Features</h2>
-        <p>Experience the future of finance with Cyberdog 2077. Our platform offers lightning-fast transactions, unbreakable security, and a range of futuristic DeFi applications that will transform the way you interact with digital assets.</p>
-    </div>
-
-    <footer>
-        <p>&copy; 2077 Cyberdog. All rights reserved.</p>
-        <div class="social-icons">
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                <img src="https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png" alt="Twitter X Logo">
-            </a>
-            <a href="https://telegram.org" target="_blank" rel="noopener noreferrer">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/182px-Telegram_2019_Logo.svg.png" alt="Telegram Logo">
-            </a>
-            <a href="https://dexscreener.com" target="_blank" rel="noopener noreferrer">
-                <img src="https://cdn.prod.website-files.com/6421d264d066fd2b24b91b20/661375b92a7e161501f4b5e5_dexscreener.322a5a2d.png" alt="DexScreener Logo">
-            </a>
-            <a href="https://pump.fun" target="_blank" rel="noopener noreferrer">
-                <img src="https://pump.fun/icon.png?c2a22dd8671140c9" alt="Pump Fun Logo">
-            </a>
-        </div>
-    </footer>
+    </main>
 </body>
 </html>
