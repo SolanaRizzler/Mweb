@@ -3,64 +3,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moana Lisa - Louvre Exhibit</title>
+    <title>Trump Dog - Presidential Campaign</title>
     <style>
         body {
+            font-family: 'Georgia', serif;
             margin: 0;
             padding: 0;
-            font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-            background-color: #f0e6d2;
+            background-color: #f8f8f8;
             color: #333;
         }
-        .header {
-            background-color: #8b0000;
-            color: #f0e6d2;
-            text-align: center;
-            padding: 20px 0;
-            font-size: 36px;
-            letter-spacing: 2px;
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-        .exhibit {
+        header {
+            background-color: #002868;
+            color: white;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: calc(100vh - 80px);
+            margin: 0;
         }
-        .painting-frame {
-            background-color: #8b4513;
-            padding: 20px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        nav ul li {
+            margin: 0 15px;
         }
-        .painting {
-            max-height: 70vh;
-            border: 10px solid #d4af37;
-        }
-        .plaque {
-            background-color: #d4af37;
-            color: #333;
-            padding: 10px 20px;
-            margin-top: 20px;
-            text-align: center;
-            font-style: italic;
-        }
-        .artist {
+        nav ul li a {
+            color: white;
+            text-decoration: none;
             font-weight: bold;
+            font-size: 0.9em;
+        }
+        .hero {
+            background-color: #002868;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.1em;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .red-pin {
+            height: 4px;
+            background-color: #bf0a30;
+            width: 80%;
+            margin: 10px auto 30px;
+        }
+        .header-pin {
+            height: 4px;
+            background-color: #bf0a30;
+            width: 100%;
+        }
+        .about, .campaign-promises {
+            padding: 60px 0;
+        }
+        .about img {
+            max-width: 300px;
+            height: auto;
+            display: block;
+            margin: 0 auto 30px;
+            border-radius: 10%;
+        }
+        .campaign-promises ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .campaign-promises li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+        .campaign-promises li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #002868;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #002868;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .footer-section {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .footer-section h3 {
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+        .footer-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .footer-section ul li {
+            margin-bottom: 5px;
+        }
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .copyright {
+            margin-top: 20px;
+            font-size: 0.8em;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        The Louvre Presents
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#campaign">Campaign</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main class="exhibit">
-        <div class="painting-frame">
-            <img src="https://i.postimg.cc/zvjnJJ5h/Moanalisa-safe.png" alt="Moana Lisa" class="painting">
-            <div class="plaque">
-                <h2>Moana Lisa</h2>
-                <p>Oil on canvas, c. 2024</p>
-                <p class="artist">Artist: Leonardo Da Freaky</p>
+    <div class="header-pin"></div>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Trump Dog for President</h1>
+            <p>A New Breed of Leadership for America</p>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Trump Dog</h2>
+            <div class="red-pin"></div>
+            <img src="https://i.postimg.cc/sDyrhzV2/TrumpDog.png" alt="Trump Dog">
+            <p>Trump Dog is a visionary leader with a proven track record in loyalty, protection, and unwavering dedication. With years of experience in community engagement and conflict resolution, Trump Dog is uniquely qualified to lead our nation towards a brighter future.</p>
+        </div>
+    </section>
+
+    <section id="campaign" class="campaign-promises">
+        <div class="container">
+            <h2 class="section-title">Campaign Platform</h2>
+            <div class="red-pin"></div>
+            <ul>
+                <li>Strengthen national security and border protection</li>
+                <li>Implement comprehensive healthcare reform</li>
+                <li>Boost economic growth and job creation</li>
+                <li>Improve education and workforce development</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="header-pin"></div>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@trumpdog2024.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#campaign">Campaign</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><img src="https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png" alt="X (Twitter)" /></a>
+                        <a href="#" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/182px-Telegram_2019_Logo.svg.png" alt="Telegram" /></a>
+                        <a href="#" target="_blank"><img src="https://cdn.prod.website-files.com/6421d264d066fd2b24b91b20/661375b92a7e161501f4b5e5_dexscreener.322a5a2d.png" alt="DexScreener" /></a>
+                        <a href="#" target="_blank"><img src="https://pump.fun/icon.png?c2a22dd8671140c9" alt="Pump" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Trump Dog Presidential Campaign. All rights reserved.</p>
             </div>
         </div>
-    </main>
+    </footer>
 </body>
 </html>
